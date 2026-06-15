@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pallavi Sharma — AI Product Leader</title>
+  <meta name="description" content="AI Product Lead at Amazon. Designed chips at Intel. Built cloud infrastructure at AWS. Ships agentic AI at enterprise scale." />
+  <meta property="og:title" content="Pallavi Sharma — AI Product Leader" />
+  <meta property="og:description" content="Silicon → Cloud → AI. I build AI systems that work when the demo is over." />
+  <meta property="og:image" content="assets/visuals/2026-05-08-silicon-to-ai-arc.png" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg:       '#080c14',
+            surface:  '#111827',
+            surface2: '#1a2234',
+            gold:     '#f59e0b',
+            blue:     '#60a5fa',
+            text:     '#f1f5f9',
+            muted:    '#94a3b8',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ── Base ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { background: #080c14; color: #f1f5f9; font-family: 'Inter', sans-serif; }
+    body { margin: 0; overflow-x: hidden; }
+
+    /* ── Grain overlay ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    }
+
+    /* ── Hero animated gradient ── */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 60% 40%, rgba(245,158,11,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 20% 80%, rgba(96,165,250,0.05) 0%, transparent 60%),
+        #080c14;
+      animation: heroShift 12s ease-in-out infinite alternate;
+    }
+    @keyframes heroShift {
+      0%   { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    /* ── Nav scroll behavior ── */
+    #main-nav {
+      transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+    }
+    #main-nav.scrolled {
+      background: rgba(8,12,20,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+    }
+
+    /* ── Timeline connector ── */
+    .timeline-connector {
+      position: absolute;
+      top: 28px;
+      left: calc(50% + 90px);
+      right: calc(-50% + 90px);
+      height: 2px;
+      background: linear-gradient(90deg, #f59e0b, rgba(245,158,11,0.2));
+      z-index: 0;
+    }
+
+    /* ── Scroll-reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── Card hover ── */
+    .card-hover {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(245,158,11,0.18);
+      border-color: rgba(245,158,11,0.25) !important;
+    }
+
+    /* ── Writing image ── */
+    .writing-img {
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    /* ── Focus visible ── */
+    :focus-visible {
+      outline: 2px solid #f59e0b;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ── Gold underline on overline ── */
+    .overline-badge {
+      display: inline-block;
+      border: 1px solid rgba(245,158,11,0.5);
+      color: #f59e0b;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 999px;
+      background: rgba(245,158,11,0.06);
+    }
+
+    /* ── Status dots ── */
+    .dot-live    { color: #22c55e; animation: pulse-dot 2s ease-in-out infinite; }
+    .dot-building{ color: #f59e0b; animation: pulse-dot 2s ease-in-out infinite; }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.4; }
+    }
+
+    /* ── Substack strip ── */
+    .substack-strip {
+      background: linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(96,165,250,0.05) 100%);
+      border-top: 1px solid rgba(245,158,11,0.15);
+      border-bottom: 1px solid rgba(245,158,11,0.15);
+    }
+
+    /* ── Mobile menu ── */
+    #mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+    }
+    #mobile-menu.open {
+      display: flex;
+    }
+
+    /* ── Counter animation ── */
+    .stat-number { font-variant-numeric: tabular-nums; }
+
+    /* ── Section title rule ── */
+    .section-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .section-eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 2px;
+      background: #f59e0b;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-bg text-text">
+
+  <!-- ═══════════════════════════════════════════
+       NAV
+  ════════════════════════════════════════════ -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="font-semibold text-white text-lg tracking-tight hover:text-gold transition-colors">
+        Pallavi Sharma
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#projects" class="text-muted hover:text-text text-sm font-medium transition-colors">Projects</a>
+        <a href="#writing"  class="text-muted hover:text-text text-sm font-medium transition-colors">Writing</a>
+        <a href="#connect"  class="text-sm font-semibold px-4 py-2 rounded-full border border-gold/40 text-gold hover:bg-gold/10 transition-all">Connect</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="hamburger" aria-label="Open navigation menu" class="md:hidden flex flex-col gap-1.5 p-2 -mr-2 focus-visible:outline-gold">
+        <span class="block w-5 h-0.5 bg-text rounded transition-all" id="hb1"></span>
+        <span class="block w-5 h-0.5 bg-text rounded transition-all" id="hb2"></span>
+        <span class="block w-5 h-0.5 bg-text rounded transition-all" id="hb3"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden flex-col bg-surface border-t border-white/5 mt-4 -mx-6 px-6 pb-4 pt-2">
+      <a href="#projects" class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Projects</a>
+      <a href="#writing"  class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Writing</a>
+      <a href="#connect"  class="block py-3 text-gold font-semibold text-sm transition-colors">Connect</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════ -->
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden pt-20">
+      <div class="hero-bg"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24 w-full">
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+          <!-- Left: text -->
+          <div>
+            <div class="overline-badge reveal mb-6">Silicon → Cloud → AI</div>
+
+            <h1 class="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-text mb-6">
+              I build AI systems<br class="hidden md:block" />
+              that work when<br class="hidden md:block" />
+              the demo is over.
+            </h1>
+
+            <p class="reveal reveal-delay-2 text-muted text-lg leading-relaxed mb-8 max-w-xl">
+              AI Product Lead at Amazon. Designed chips at Intel. Built cloud infrastructure at AWS. Ships agentic AI at enterprise scale. Also runs five personal AI systems — because the day job isn't enough.
+            </p>
+
+            <!-- Stats row -->
+            <div class="reveal reveal-delay-3 grid grid-cols-4 gap-4 mb-10 py-6 border-y border-white/8">
+              <div class="text-center">
+                <div class="stat-number text-2xl md:text-3xl font-bold text-gold" data-target="130000" data-suffix="K" data-divisor="1000">0K</div>
+                <div class="text-xs text-muted mt-1 leading-tight">users in<br/>production</div>
+              </div>
+              <div class="text-center">
+                <div class="stat-number text-2xl md:text-3xl font-bold text-gold" data-target="9">0</div>
+                <div class="text-xs text-muted mt-1 leading-tight">AI agents<br/>running at home</div>
+              </div>
+              <div class="text-center">
+                <div class="stat-number text-2xl md:text-3xl font-bold text-gold" data-target="1">0</div>
+                <div class="text-xs text-muted mt-1 leading-tight">US<br/>patent</div>
+              </div>
+              <div class="text-center">
+                <div class="stat-number text-2xl md:text-3xl font-bold text-gold" data-target="5">0</div>
+                <div class="text-xs text-muted mt-1 leading-tight">personal<br/>AI projects</div>
+              </div>
+            </div>
+
+            <!-- CTA buttons -->
+            <div class="reveal reveal-delay-4 flex flex-wrap gap-4">
+              <a href="#connect"
+                 class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-bg font-semibold text-sm hover:bg-amber-400 transition-all shadow-lg shadow-gold/20">
+                Connect on LinkedIn
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#writing"
+                 class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/15 text-text font-medium text-sm hover:border-white/30 hover:bg-white/5 transition-all">
+                Signals from the Stack
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: silicon arc image (desktop only) -->
+          <div class="hidden md:flex justify-center items-center">
+            <div class="relative">
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/10 to-blue/5 blur-3xl scale-110"></div>
+              <img
+                src="assets/visuals/2026-05-08-silicon-to-ai-arc.png"
+                alt="Silicon to Cloud to AI arc — Pallavi Sharma's career trajectory from Intel chip design through AWS cloud to Amazon AI"
+                class="relative z-10 rounded-2xl shadow-2xl shadow-black/60 w-full max-w-lg object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         THE ARC — career timeline
+    ════════════════════════════════════════════ -->
+    <section id="arc" class="relative py-24 md:py-32 overflow-hidden">
+      <!-- Subtle section divider -->
+      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <!-- Section header -->
+        <div class="mb-16 reveal">
+          <div class="section-eyebrow">
+            <span class="text-xs font-semibold tracking-widest text-gold uppercase">Career</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">The Arc</h2>
+          <p class="text-muted text-lg max-w-xl">Three layers of the stack. One compounding discipline.</p>
+        </div>
+
+        <!-- Desktop timeline -->
+        <div class="hidden lg:grid grid-cols-3 gap-8 relative">
+          <!-- Connector line -->
+          <div class="absolute top-8 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-gold/60 via-gold/40 to-gold/20 z-0 -translate-x-[calc(50%-50%)]"></div>
+          <div class="absolute top-8 left-[16.67%] right-[16.67%] h-0.5 bg-gradient-to-r from-gold/60 via-gold/40 to-gold/20 z-0"></div>
+
+          <!-- Milestone 1: Intel -->
+          <div class="reveal card-hover relative z-10 bg-surface border border-white/8 rounded-2xl p-7">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-14 h-14 rounded-xl bg-surface2 border border-white/8 flex items-center justify-center flex-shrink-0">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                  <rect x="4" y="4" width="20" height="20" rx="2" stroke="#f59e0b" stroke-width="1.5"/>
+                  <rect x="9" y="9" width="10" height="10" rx="1" fill="#f59e0b" opacity="0.2"/>
+                  <path d="M9 9h10v10H9z" stroke="#f59e0b" stroke-width="1"/>
+                  <path d="M4 11h2M4 17h2M22 11h2M22 17h2M11 4v2M17 4v2M11 22v2M17 22v2" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="inline-block text-xs font-bold tracking-widest text-gold uppercase bg-gold/10 px-2 py-0.5 rounded mb-1">Silicon</span>
+                <div class="text-xs text-muted">2010–2016</div>
+              </div>
+            </div>
+            <h3 class="font-bold text-lg text-text mb-1">Intel Custom Foundry</h3>
+            <p class="text-xs text-muted mb-3">Hillsboro, OR</p>
+            <p class="text-sm font-medium text-blue mb-4">Hardware Design Engineer → Senior Custom Engineering Lead</p>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              Designed and validated ASICs at 10–22nm. End-to-end pre-silicon architecture through physical signoff. Novel EM/IR/power methodology developed at the foundry. Customer-facing technical lead for ASIC/SoC customers including Cisco, LG, Panasonic, Sony. Enabled $12M annual foundry revenue. Reduced customer ramp-up time 33%.
+            </p>
+            <div class="border-t border-white/8 pt-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">US 10–22nm nodes</span>
+                <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">$12M revenue</span>
+                <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">33% ramp reduction</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 2: AWS -->
+          <div class="reveal reveal-delay-2 card-hover relative z-10 bg-surface border border-white/8 rounded-2xl p-7">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-14 h-14 rounded-xl bg-surface2 border border-white/8 flex items-center justify-center flex-shrink-0">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                  <path d="M6 18c-2.2-1-3-3-2-5 .7-1.5 2-2.5 3.5-2.5C8 8 11 6 14 6s6 2 6.5 4.5C22 10.8 24 13 24 16c0 1-1 2-2 2" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M8 18h12" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M10 22l-2-4M14 22v-4M18 22l2-4" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="inline-block text-xs font-bold tracking-widest text-blue uppercase bg-blue/10 px-2 py-0.5 rounded mb-1">Cloud</span>
+                <div class="text-xs text-muted">2018–2024</div>
+              </div>
+            </div>
+            <h3 class="font-bold text-lg text-text mb-1">Amazon Web Services</h3>
+            <p class="text-xs text-muted mb-3">Seattle, WA</p>
+            <p class="text-sm font-medium text-blue mb-4">Senior PMT → Principal PMT, EC2 & SaaS Applications</p>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              Built the first guided cloud deployment platform for enterprise SAP HANA and SQL Server workloads — cut deployment time from days to hours. Invented pre-provisioning validation (US Patent US11588801B1). Shipped Fleet Manager to 40K MAU, eliminating bastion hosts and inbound ports with Just-in-Time session access. Led myApplications: AI-powered platform across 300+ AWS services.
+            </p>
+            <div class="border-t border-white/8 pt-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">US Patent US11588801B1</span>
+                <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">40K MAU</span>
+                <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">60% complexity reduction</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 3: Amazon Quick Suite -->
+          <div class="reveal reveal-delay-3 card-hover relative z-10 bg-surface border border-gold/15 rounded-2xl p-7 ring-1 ring-gold/10">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                  <circle cx="14" cy="14" r="3" fill="#f59e0b"/>
+                  <path d="M14 6v3M14 19v3M6 14h3M19 14h3" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M8.6 8.6l2.1 2.1M17.3 17.3l2.1 2.1M8.6 19.4l2.1-2.1M17.3 10.7l2.1-2.1" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+                  <circle cx="14" cy="14" r="8" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+                </svg>
+              </div>
+              <div>
+                <span class="inline-block text-xs font-bold tracking-widest text-gold uppercase bg-gold/10 px-2 py-0.5 rounded mb-1">AI · Now</span>
+                <div class="text-xs text-muted">2024–Present</div>
+              </div>
+            </div>
+            <h3 class="font-bold text-lg text-text mb-1">Amazon Quick Suite</h3>
+            <p class="text-xs text-muted mb-3">Seattle, WA</p>
+            <p class="text-sm font-medium text-gold mb-4">Product Lead — Embedding & Agentic AI</p>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              Launched the first cross-platform embedded agentic chat for Amazon Quick Suite. First major enterprise deployment: 130K employees at DXC Technology, integrating ServiceNow, SharePoint, and internal operational systems. Designed multi-tenant white-label embedding for ISV partners. Defined enterprise AI governance: data-boundary controls, grounding configurations, web-search policies.
+            </p>
+            <div class="border-t border-gold/15 pt-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-2 py-1 rounded bg-gold/10 text-gold border border-gold/20">130K users</span>
+                <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Multi-tenant embedding</span>
+                <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Enterprise AI governance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile: vertical timeline -->
+        <div class="lg:hidden flex flex-col gap-6 relative">
+          <div class="absolute left-7 top-14 bottom-14 w-0.5 bg-gradient-to-b from-gold/60 via-gold/30 to-transparent z-0"></div>
+
+          <!-- Intel mobile -->
+          <div class="reveal relative z-10 flex gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-surface2 border border-white/8 flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <rect x="4" y="4" width="20" height="20" rx="2" stroke="#f59e0b" stroke-width="1.5"/>
+                <rect x="9" y="9" width="10" height="10" rx="1" fill="#f59e0b" opacity="0.2"/>
+              </svg>
+            </div>
+            <div class="bg-surface border border-white/8 rounded-xl p-5 flex-1 card-hover">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-xs font-bold tracking-widest text-gold uppercase bg-gold/10 px-2 py-0.5 rounded">Silicon</span>
+                <span class="text-xs text-muted">2010–2016</span>
+              </div>
+              <h3 class="font-bold text-base text-text mb-1">Intel Custom Foundry — Hillsboro, OR</h3>
+              <p class="text-xs text-blue mb-3">Hardware Design Engineer → Senior Custom Engineering Lead</p>
+              <p class="text-sm text-muted leading-relaxed">Designed and validated ASICs at 10–22nm. Enabled $12M annual foundry revenue. Reduced customer ramp-up time 33%. Customer-facing lead for Cisco, LG, Panasonic, Sony.</p>
+            </div>
+          </div>
+
+          <!-- AWS mobile -->
+          <div class="reveal reveal-delay-1 relative z-10 flex gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-surface2 border border-white/8 flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <path d="M6 18c-2.2-1-3-3-2-5 .7-1.5 2-2.5 3.5-2.5C8 8 11 6 14 6s6 2 6.5 4.5C22 10.8 24 13 24 16c0 1-1 2-2 2" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="bg-surface border border-white/8 rounded-xl p-5 flex-1 card-hover">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-xs font-bold tracking-widest text-blue uppercase bg-blue/10 px-2 py-0.5 rounded">Cloud</span>
+                <span class="text-xs text-muted">2018–2024</span>
+              </div>
+              <h3 class="font-bold text-base text-text mb-1">Amazon Web Services — Seattle, WA</h3>
+              <p class="text-xs text-blue mb-3">Senior PMT → Principal PMT, EC2 & SaaS Applications</p>
+              <p class="text-sm text-muted leading-relaxed">Fleet Manager to 40K MAU. US Patent US11588801B1. myApplications across 300+ AWS services. Cut enterprise deployment time from days to hours.</p>
+            </div>
+          </div>
+
+          <!-- AI mobile -->
+          <div class="reveal reveal-delay-2 relative z-10 flex gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <circle cx="14" cy="14" r="3" fill="#f59e0b"/>
+                <path d="M14 6v3M14 19v3M6 14h3M19 14h3" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="bg-surface border border-gold/15 rounded-xl p-5 flex-1 card-hover ring-1 ring-gold/10">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-xs font-bold tracking-widest text-gold uppercase bg-gold/10 px-2 py-0.5 rounded">AI · Now</span>
+                <span class="text-xs text-muted">2024–Present</span>
+              </div>
+              <h3 class="font-bold text-base text-text mb-1">Amazon Quick Suite — Seattle, WA</h3>
+              <p class="text-xs text-gold mb-3">Product Lead — Embedding & Agentic AI</p>
+              <p class="text-sm text-muted leading-relaxed">130K users at DXC Technology. First cross-platform embedded agentic chat. Multi-tenant white-label embedding. Enterprise AI governance framework.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PALLAVI AI LABS — Projects
+    ════════════════════════════════════════════ -->
+    <section id="projects" class="relative py-24 md:py-32 bg-surface2/30">
+      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <!-- Section header -->
+        <div class="mb-16 reveal">
+          <div class="section-eyebrow">
+            <span class="text-xs font-semibold tracking-widest text-gold uppercase">Personal Lab</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">Pallavi AI Labs</h2>
+          <p class="text-muted text-lg max-w-2xl">Personal AI systems. All live. All solving real problems. Built evenings and weekends because the day job isn't enough.</p>
+        </div>
+
+        <!-- Project cards grid -->
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+          <!-- Card 1: InHerVoice -->
+          <div class="reveal card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div class="text-3xl" aria-hidden="true">✍️</div>
+              <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
+                <span class="dot-live text-base leading-none">●</span> LIVE
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-text mb-1">InHerVoice</h3>
+            <p class="text-sm font-medium text-gold mb-3">AI PM Brand Builder</p>
+            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
+              Multi-agent content intelligence system that turns 15 years of enterprise depth and live personal AI builds into a respected AI PM voice on LinkedIn and Substack. Three-layer intelligence: live industry signals + career experience + active lab observations.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Claude Code</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Python</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Obsidian</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Floppy -->
+          <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div class="text-3xl" aria-hidden="true">🏠</div>
+              <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
+                <span class="dot-live text-base leading-none">●</span> LIVE
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-text mb-1">Floppy</h3>
+            <p class="text-sm font-medium text-gold mb-3">Family AI Concierge</p>
+            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
+              Multi-agent system running daily household logistics for a working-parent family. Multi-rhythm planning (morning, 3PM, 4PM, nightly), domain-aware lookahead horizons (90 days for camps, 7 days for daily prep), dual runtime (OpenClaw production + Hermes shadow), agent society architecture. ~$40/month.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">OpenClaw</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Multi-agent</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Telegram</span>
+            </div>
+          </div>
+
+          <!-- Card 3: BrainSpark Academy -->
+          <div class="reveal reveal-delay-2 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div class="text-3xl" aria-hidden="true">🎓</div>
+              <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
+                <span class="dot-live text-base leading-none">●</span> LIVE DEMO
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-text mb-1">BrainSpark Academy</h3>
+            <p class="text-sm font-medium text-gold mb-3">AI Learning Companion for Children</p>
+            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
+              Tablet-first AI tutoring app. Five subjects: Math, English, French, Hindi, Spanish. Voice input and read-aloud for special needs kids. Parent dashboard with provider selection and usage controls. Built for underserved communities globally.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">React PWA</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">OpenAI</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Anthropic</span>
+            </div>
+            <a href="https://brainspark-academy-public-demo.vercel.app" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
+              Try the demo
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Card 4: SignalAtlas -->
+          <div class="reveal card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div class="text-3xl" aria-hidden="true">🗺️</div>
+              <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
+                <span class="dot-live text-base leading-none">●</span> LIVE DEMO
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-text mb-1">SignalAtlas</h3>
+            <p class="text-sm font-medium text-gold mb-3">Decision Intelligence for Global Cities</p>
+            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
+              Investment and business opportunity discovery across global cities. Opinionated product: translates city data into a city thesis, investor lens, business lens, and next-click paths — not a metrics dashboard. Multi-agent architecture for real-time signal synthesis.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Next.js</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Supabase</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Multi-agent</span>
+            </div>
+            <a href="https://signalatlas-ai.vercel.app" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
+              Explore the demo
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Card 5: Learning Brain -->
+          <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div class="text-3xl" aria-hidden="true">🧠</div>
+              <span class="flex items-center gap-1.5 text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full border border-gold/20">
+                <span class="dot-building text-base leading-none">●</span> BUILDING
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-text mb-1">Learning Brain</h3>
+            <p class="text-sm font-medium text-gold mb-3">Local-First Personal Learning System</p>
+            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
+              The saved-folder graveyard problem: we save reels, screenshots, links — and never get back to them. Learning Brain captures everything (screenshots, articles, PDFs, YouTube), builds a local knowledge graph, teaches adaptively with spaced repetition, and discovers adjacent topics you should see coming. SQLite canonical store. BM25 retrieval. Citation validation — fabricated citations are structurally impossible.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Node.js</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">SQLite</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">PWA</span>
+            </div>
+          </div>
+
+        </div><!-- /grid -->
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         WRITING — Signals from the Stack
+    ════════════════════════════════════════════ -->
+    <section id="writing" class="relative py-24 md:py-32">
+      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <!-- Section header -->
+        <div class="mb-16 reveal">
+          <div class="section-eyebrow">
+            <span class="text-xs font-semibold tracking-widest text-gold uppercase">Writing</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">Signals from the Stack</h2>
+          <p class="text-muted text-lg">Writing from the inside. Not commentary.</p>
+        </div>
+
+        <!-- Writing cards grid -->
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+
+          <!-- Post 1: Featured/large -->
+          <div class="reveal card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col md:row-span-1">
+            <div class="overflow-hidden">
+              <img
+                src="assets/visuals/2026-05-08-silicon-to-ai-arc.png"
+                alt="Silicon to AI arc — career trajectory illustration"
+                class="writing-img object-top hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full border border-gold/20">Intersection</span>
+                <span class="text-xs text-muted">May 2026</span>
+              </div>
+              <h3 class="font-bold text-lg md:text-xl text-text mb-3 leading-snug">
+                I designed chips at Intel. Then cloud at AWS. Now I ship AI agents. Here is what transfers.
+              </h3>
+              <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
+                Every product decision I make today, including AI systems serving 130,000 active users, still runs through the same question I asked at the chip level. Where does this fail, and who does not know it yet?
+              </p>
+              <a href="#connect" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
+                Read on LinkedIn
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Post 2 -->
+          <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
+            <div class="overflow-hidden">
+              <img
+                src="assets/visuals/2026-05-21-seattle-shield-consent-default.png"
+                alt="Seattle Shield consent and default settings — enterprise AI identity illustration"
+                class="writing-img hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-blue bg-blue/10 px-2.5 py-1 rounded-full border border-blue/20">Enterprise AI</span>
+                <span class="text-xs text-muted">June 2026</span>
+              </div>
+              <h3 class="font-bold text-lg text-text mb-3 leading-snug">
+                Six years before anyone said "AI agent identity," I shipped the fix for it to 40,000 servers
+              </h3>
+              <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
+                An agent that can act inside your systems is a user that never logs off. It needs the same four answers a human does: who is it, what can it touch, when does access expire, and where is the record.
+              </p>
+              <a href="#connect" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
+                Read on LinkedIn
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Post 3 -->
+          <div class="reveal reveal-delay-2 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
+            <div class="overflow-hidden">
+              <img
+                src="assets/visuals/2026-05-18-hyperscaler-chips-intel-foundry.png"
+                alt="Hyperscaler chips and Intel foundry — silicon supply chain illustration"
+                class="writing-img hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-muted bg-white/5 px-2.5 py-1 rounded-full border border-white/10">Silicon + Infrastructure</span>
+                <span class="text-xs text-muted">May 2026</span>
+              </div>
+              <h3 class="font-bold text-lg text-text mb-3 leading-snug">
+                Every hyperscaler is building their own AI chip. I designed silicon at Intel. Here is what they are really doing.
+              </h3>
+              <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
+                Six to nine months before any chip announcement, the customer locks allocation on the foundry's roadmap. Wafer starts, mask sets, test capacity, packaging. If your AI vendor depends on a specific GPU class, your timeline depends on a meeting you were not in.
+              </p>
+              <a href="#connect" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
+                Read on LinkedIn
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Post 4 -->
+          <div class="reveal reveal-delay-3 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
+            <div class="overflow-hidden">
+              <img
+                src="assets/visuals/2026-05-21-agent-eval-outcome-leaderboards.png"
+                alt="Agent evaluation outcome leaderboards — AI citation validation illustration"
+                class="writing-img hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full border border-gold/20">Personal AI</span>
+                <span class="text-xs text-muted">June 2026</span>
+              </div>
+              <h3 class="font-bold text-lg text-text mb-3 leading-snug">
+                Most AI tools cite their sources. I built mine so it physically can't invent one.
+              </h3>
+              <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
+                Every AI tool says it cites its sources. Mine cannot make one up. Not "tries not to." Cannot. The citation layer fails closed: if a quote can't be matched to something I actually saved, it never reaches me.
+              </p>
+              <a href="#connect" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
+                Read on LinkedIn
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /grid -->
+
+        <!-- See all writing CTA -->
+        <div class="reveal text-center mb-16">
+          <a href="https://www.linkedin.com/in/pallavi-sharma-ai/" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-gold/40 text-gold font-semibold text-sm hover:bg-gold/10 hover:border-gold/60 transition-all">
+            <!-- UPDATE: LinkedIn URL -->
+            See all writing on LinkedIn
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- Substack promo strip -->
+        <div class="reveal substack-strip rounded-2xl px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <p class="font-semibold text-text mb-1">Signals from the Stack</p>
+            <p class="text-sm text-muted">The weekly Substack newsletter. Technical deep-dives behind every post.</p>
+          </div>
+          <a href="#" <!-- UPDATE: Substack URL --> target="_blank" rel="noopener noreferrer"
+             class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-bg font-semibold text-sm hover:bg-amber-400 transition-all shadow-lg shadow-gold/20 whitespace-nowrap">
+            Subscribe free
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONNECT
+    ════════════════════════════════════════════ -->
+    <section id="connect" class="relative py-24 md:py-32 bg-surface2/30">
+      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <!-- Section header -->
+        <div class="mb-16 reveal text-center">
+          <div class="section-eyebrow justify-center">
+            <span class="text-xs font-semibold tracking-widest text-gold uppercase">Get in touch</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">Connect</h2>
+          <p class="text-muted text-lg">I reply to thoughtful messages. Usually within 24 hours.</p>
+        </div>
+
+        <!-- Connect cards -->
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <!-- LinkedIn -->
+          <div class="reveal card-hover bg-surface border border-white/8 rounded-2xl p-7 flex flex-col items-start">
+            <div class="w-12 h-12 rounded-xl bg-blue/10 border border-blue/20 flex items-center justify-center mb-5">
+              <!-- LinkedIn icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#60a5fa" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-text mb-2">LinkedIn</h3>
+            <p class="text-sm text-muted leading-relaxed flex-1 mb-6">
+              Primary writing home. 3 posts/week on enterprise AI, silicon, and personal AI systems.
+            </p>
+            <a href="https://www.linkedin.com/in/pallavi-sharma-ai/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-blue hover:text-blue/80 transition-colors">
+              <!-- UPDATE: LinkedIn URL -->
+              Follow on LinkedIn
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Substack -->
+          <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl p-7 flex flex-col items-start">
+            <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center mb-5">
+              <!-- Newsletter icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="3" stroke="#f59e0b" stroke-width="1.8"/>
+                <path d="M2 8l10 7 10-7" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-text mb-2">Signals from the Stack</h3>
+            <p class="text-sm text-muted leading-relaxed flex-1 mb-6">
+              Weekly newsletter. Technical deep-dives on the posts. Free.
+            </p>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors">
+              <!-- UPDATE: Substack URL -->
+              Subscribe
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <!-- GitHub -->
+          <div class="reveal reveal-delay-2 card-hover bg-surface border border-white/8 rounded-2xl p-7 flex flex-col items-start">
+            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-5">
+              <!-- GitHub icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#94a3b8" aria-hidden="true">
+                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-text mb-2">Pallavi AI Labs</h3>
+            <p class="text-sm text-muted leading-relaxed flex-1 mb-6">
+              InHerVoice, BrainSpark, SignalAtlas, and more. Private and public repos.
+            </p>
+            <a href="https://github.com/pallavi-ai-labs" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-muted hover:text-text transition-colors">
+              View GitHub
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+        </div><!-- /connect cards -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="relative border-t border-white/8 py-10">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+        <span class="text-muted">© 2026 Pallavi Sharma</span>
+        <span class="text-muted/50 text-xs tracking-wide">AI Product Leader · Silicon to Cloud to AI</span>
+        <span class="text-muted/60 text-xs">Built by InHerVoice · Pallavi AI Labs</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       JAVASCRIPT — scroll, nav, animations
+  ════════════════════════════════════════════ -->
+  <script>
+    // ── Nav scroll behavior ──
+    const nav = document.getElementById('main-nav');
+    const onScroll = () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // ── Hamburger menu ──
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hb1 = document.getElementById('hb1');
+    const hb2 = document.getElementById('hb2');
+    const hb3 = document.getElementById('hb3');
+    let menuOpen = false;
+
+    hamburger.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('open', menuOpen);
+      hamburger.setAttribute('aria-expanded', menuOpen);
+      // Animate hamburger → X
+      hb1.style.transform = menuOpen ? 'translateY(8px) rotate(45deg)' : '';
+      hb2.style.opacity   = menuOpen ? '0' : '1';
+      hb3.style.transform = menuOpen ? 'translateY(-8px) rotate(-45deg)' : '';
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hb1.style.transform = '';
+        hb2.style.opacity   = '1';
+        hb3.style.transform = '';
+      });
+    });
+
+    // ── Scroll-reveal (Intersection Observer) ──
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ── Stats counter animation ──
+    let statsAnimated = false;
+    const statEls = document.querySelectorAll('[data-target]');
+
+    const animateStats = () => {
+      if (statsAnimated) return;
+      statsAnimated = true;
+
+      statEls.forEach(el => {
+        const target   = parseInt(el.dataset.target, 10);
+        const divisor  = parseInt(el.dataset.divisor || '1', 10);
+        const suffix   = el.dataset.suffix || '';
+        const duration = 1600;
+        const start    = performance.now();
+
+        const tick = (now) => {
+          const elapsed  = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease out cubic
+          const eased    = 1 - Math.pow(1 - progress, 3);
+          const value    = Math.round(eased * target / divisor);
+          el.textContent = value + suffix;
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    };
+
+    // Trigger counter when hero stats row is visible
+    const statsObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        animateStats();
+        statsObserver.disconnect();
+      }
+    }, { threshold: 0.5 });
+
+    const statsRow = document.querySelector('[data-target]')?.closest('.grid');
+    if (statsRow) statsObserver.observe(statsRow);
+  </script>
+
+</body>
+</html>
