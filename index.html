@@ -659,17 +659,129 @@
         </div>
 
         <!-- Writing cards grid — only shows confirmed published LinkedIn posts -->
-        <!-- ADD POSTS: run /website add-post [slug] after each LinkedIn publish, or tell Claude the post title + URL -->
-        <div class="mb-12 reveal">
-          <div class="border border-dashed border-white/10 rounded-2xl p-14 text-center">
-            <p class="text-text font-semibold text-lg mb-3">Writing in progress.</p>
-            <p class="text-muted text-sm max-w-sm mx-auto mb-7">Posts appear here once they go live on LinkedIn. Follow to catch them as they drop.</p>
-            <a href="https://www.linkedin.com/in/erpallavisharma" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors">
-              Follow on LinkedIn
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+        <!-- ADD POSTS: tell Claude the LinkedIn URL after each publish -->
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
+
+          <!-- POST: ai-agent-identity | Enterprise AI -->
+          <div class="reveal card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
+            <!-- POST IMAGE: <img src="assets/visuals/post-ai-agent-identity.jpg" alt="..." class="writing-img"> -->
+            <div class="writing-img relative overflow-hidden flex items-end p-5" style="background: linear-gradient(135deg, #070f1c 0%, #0a0d14 100%);">
+              <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 2px 2px, rgba(96,165,250,0.8) 1px, transparent 0); background-size: 22px 22px;"></div>
+              <span class="relative text-[10px] font-mono tracking-widest text-blue/50 uppercase">Enterprise AI</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-blue bg-blue/10 px-2.5 py-1 rounded-full border border-blue/20">Enterprise AI</span>
+              </div>
+              <h3 class="font-bold text-lg text-text mb-3 leading-snug">Six years before anyone said "AI agent identity," I shipped the fix for it to 40,000 servers</h3>
+              <p class="text-sm text-muted leading-relaxed flex-1 mb-5">Every workplace AI agent that launched this month ran into a question nobody put on the slide: how does this thing get in, and who can see what it did. I answered that for 40,000 users in 2020.</p>
+              <a href="https://www.linkedin.com/pulse/six-years-before-anyone-said-ai-agent-identity-i-shipped-sharma-a8l0c/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">Read on LinkedIn <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
           </div>
-        </div>
+
+          <!-- POST: husband-home-ai | Personal AI -->
+          <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
+            <!-- POST IMAGE: <img src="assets/visuals/post-husband-home-ai.jpg" alt="..." class="writing-img"> -->
+            <div class="writing-img relative overflow-hidden flex items-end p-5" style="background: linear-gradient(135deg, #081410 0%, #060c0a 100%);">
+              <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 2px 2px, rgba(52,211,153,0.8) 1px, transparent 0); background-size: 22px 22px;"></div>
+              <span class="relative text-[10px] font-mono tracking-widest text-emerald-500/50 uppercase">Personal AI</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full border border-gold/20">Personal AI</span>
+              </div>
+              <h3 class="font-bold text-lg text-text mb-3 leading-snug">The thing my husband asked my home AI to do that I never designed for</h3>
+              <p class="text-sm text-muted leading-relaxed flex-1 mb-5">My husband asked my home AI to do something last week that I had not designed for. It answered him. I have been thinking about that exchange ever since.</p>
+              <a href="https://www.linkedin.com/pulse/thing-my-husband-asked-home-ai-do-i-never-designed-pallavi-sharma-265mc/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">Read on LinkedIn <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+
+          <!-- POST: agent-eval | Enterprise AI -->
+          <div class="reveal reveal-delay-2 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
+            <!-- POST IMAGE: <img src="assets/visuals/post-agent-eval.jpg" alt="..." class="writing-img"> -->
+            <div class="writing-img relative overflow-hidden flex items-end p-5" style="background: linear-gradient(135deg, #0d0a1c 0%, #0a0d14 100%);">
+              <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 2px 2px, rgba(139,92,246,0.8) 1px, transparent 0); background-size: 22px 22px;"></div>
+              <span class="relative text-[10px] font-mono tracking-widest text-violet-400/50 uppercase">Enterprise AI</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-blue bg-blue/10 px-2.5 py-1 rounded-full border border-blue/20">Enterprise AI</span>
+              </div>
+              <h3 class="font-bold text-lg text-text mb-3 leading-snug">Agent evaluation is broken. I run a different eval every night at home.</h3>
+              <p class="text-sm text-muted leading-relaxed flex-1 mb-5">Agent evaluation is broken. Outcome leaderboards do not catch drift. Single-shot benchmarks do not catch production behavior.</p>
+              <a href="https://www.linkedin.com/pulse/agent-evaluation-broken-i-run-different-eval-every-night-sharma-dp1ie/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">Read on LinkedIn <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+
+          <!-- POST: hyperscaler-chip | Silicon + Enterprise AI -->
+          <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
+            <!-- POST IMAGE: <img src="assets/visuals/post-hyperscaler-chip.jpg" alt="..." class="writing-img"> -->
+            <div class="writing-img relative overflow-hidden flex items-end p-5" style="background: linear-gradient(135deg, #0c0c0e 0%, #111118 100%);">
+              <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 2px 2px, rgba(200,200,220,0.8) 1px, transparent 0); background-size: 22px 22px;"></div>
+              <span class="relative text-[10px] font-mono tracking-widest text-muted/60 uppercase">Silicon + Frontier AI</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-muted bg-white/5 px-2.5 py-1 rounded-full border border-white/10">Silicon + Frontier AI</span>
+              </div>
+              <h3 class="font-bold text-lg text-text mb-3 leading-snug">Every hyperscaler is building their own AI chip. I designed silicon. Now I ship AI.</h3>
+              <p class="text-sm text-muted leading-relaxed flex-1 mb-5">Every hyperscaler is now building their own AI chip. The takes I read make it sound clean. Vertical integration. Better margins. Better control.</p>
+              <a href="https://www.linkedin.com/pulse/every-hyperscaler-building-own-ai-chip-i-designed-silicon-sharma-pm6rc/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">Read on LinkedIn <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+
+          <!-- POST: openai-enterprise | Enterprise AI -->
+          <div class="reveal reveal-delay-2 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
+            <!-- POST IMAGE: <img src="assets/visuals/post-openai-enterprise.jpg" alt="..." class="writing-img"> -->
+            <div class="writing-img relative overflow-hidden flex items-end p-5" style="background: linear-gradient(135deg, #071a14 0%, #060f0c 100%);">
+              <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 2px 2px, rgba(96,165,250,0.8) 1px, transparent 0); background-size: 22px 22px;"></div>
+              <span class="relative text-[10px] font-mono tracking-widest text-blue/50 uppercase">Enterprise AI</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-blue bg-blue/10 px-2.5 py-1 rounded-full border border-blue/20">Enterprise AI</span>
+              </div>
+              <h3 class="font-bold text-lg text-text mb-3 leading-snug">OpenAI just launched a company to do what I spent 3 years building</h3>
+              <p class="text-sm text-muted leading-relaxed flex-1 mb-5">OpenAI just launched a separate company to help enterprises deploy AI. I spent 3 years doing exactly that.</p>
+              <a href="https://www.linkedin.com/pulse/openai-just-launched-company-do-what-i-spent-3-years-building-sharma-owcyc/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">Read on LinkedIn <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+
+          <!-- POST: 9-agents-family | Personal AI -->
+          <div class="reveal reveal-delay-3 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
+            <!-- POST IMAGE: <img src="assets/visuals/post-9-agents-family.jpg" alt="..." class="writing-img"> -->
+            <div class="writing-img relative overflow-hidden flex items-end p-5" style="background: linear-gradient(135deg, #1c1100 0%, #0d0c14 100%);">
+              <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 2px 2px, rgba(245,158,11,0.8) 1px, transparent 0); background-size: 22px 22px;"></div>
+              <span class="relative text-[10px] font-mono tracking-widest text-gold/50 uppercase">Personal AI</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full border border-gold/20">Personal AI</span>
+              </div>
+              <h3 class="font-bold text-lg text-text mb-3 leading-snug">9 agents. $40 a month. One family.</h3>
+              <p class="text-sm text-muted leading-relaxed flex-1 mb-5">Enterprise vendors are quoting $400K to $2M for agentic deployments. I run 9 agents for my family on $40 a month.</p>
+              <a href="https://www.linkedin.com/pulse/9-agents-40-month-one-family-pallavi-sharma-pvnqc/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">Read on LinkedIn <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+
+          <!-- POST: brainspark-tutoring | Personal AI / EdTech -->
+          <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
+            <!-- POST IMAGE: <img src="assets/visuals/post-brainspark-tutoring.jpg" alt="..." class="writing-img"> -->
+            <div class="writing-img relative overflow-hidden flex items-end p-5" style="background: linear-gradient(135deg, #061418 0%, #080f14 100%);">
+              <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 2px 2px, rgba(34,211,238,0.8) 1px, transparent 0); background-size: 22px 22px;"></div>
+              <span class="relative text-[10px] font-mono tracking-widest text-cyan-400/50 uppercase">Personal AI</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full border border-gold/20">Personal AI</span>
+              </div>
+              <h3 class="font-bold text-lg text-text mb-3 leading-snug">AI Tutoring for Kids Who Need It Most</h3>
+              <p class="text-sm text-muted leading-relaxed flex-1 mb-5">Most edtech apps are built for kids who already have a tutor. BrainSpark Academy is built for the ones who don't.</p>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7447784152852004864/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">Read on LinkedIn <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+
+        </div><!-- /grid -->
 
         <!-- See all writing CTA -->
         <div class="reveal text-center mb-16">
