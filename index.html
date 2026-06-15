@@ -10,6 +10,13 @@
   <meta property="og:image" content="assets/visuals/og-default.png" />
   <!-- OG IMAGE: replace with assets/hero.png once custom image is created -->
   <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="alternate icon" href="assets/favicon.svg" />
+  <meta property="og:url" content="https://pallavi-ai-labs.github.io" />
+  <!-- ANALYTICS: Cloudflare Web Analytics (free, privacy-respecting — zero cookies, GDPR-safe)
+       To activate: sign up at cloudflare.com → Analytics & Logs → Web Analytics → Add site → copy token
+       Then tell Claude: "My Cloudflare analytics token is XYZ" and it will uncomment and fill this in. -->
+  <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "REPLACE_WITH_TOKEN"}'></script> -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -654,6 +661,30 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
+         CURRENTLY BUILDING
+    ════════════════════════════════════════════ -->
+    <!-- CURRENTLY BUILDING: update this section when project status changes in pallavi-ai-labs.md
+         Run /website sync-projects to refresh automatically -->
+    <div class="border-t border-white/5 bg-surface2/15 py-6">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
+          <div class="flex items-center gap-2.5 flex-shrink-0">
+            <span class="dot-building text-xs leading-none" aria-label="active build">●</span>
+            <span class="text-[11px] font-semibold tracking-[0.18em] text-gold/60 uppercase">Currently Building</span>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <!-- ITEM: Learning Brain -->
+            <div class="flex items-center gap-2 bg-surface/80 rounded-full px-3.5 py-1.5 border border-white/6">
+              <span class="text-xs text-text/80 font-medium">Learning Brain</span>
+              <span class="text-[10px] text-muted/70 font-mono">local-first personal learning system</span>
+            </div>
+          </div>
+          <span class="text-[10px] text-muted/40 sm:ml-auto font-mono">Updated Jun 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
          WRITING — InHerVoice
     ════════════════════════════════════════════ -->
     <section id="writing" class="relative py-24 md:py-32">
@@ -692,7 +723,10 @@
               <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
                 Every product decision I make today, including AI systems serving 130,000 active users, still runs through the same question I asked at the chip level. Where does this fail, and who does not know it yet?
               </p>
-              <a href="#connect" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
+              <a href="https://www.linkedin.com/in/erpallavisharma"
+                 data-post-url=""
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
                 Read on LinkedIn
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
@@ -719,7 +753,10 @@
               <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
                 An agent that can act inside your systems is a user that never logs off. It needs the same four answers a human does: who is it, what can it touch, when does access expire, and where is the record.
               </p>
-              <a href="#connect" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
+              <a href="https://www.linkedin.com/in/erpallavisharma"
+                 data-post-url=""
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
                 Read on LinkedIn
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
@@ -746,7 +783,10 @@
               <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
                 Six to nine months before any chip announcement, the customer locks allocation on the foundry's roadmap. Wafer starts, mask sets, test capacity, packaging. If your AI vendor depends on a specific GPU class, your timeline depends on a meeting you were not in.
               </p>
-              <a href="#connect" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
+              <a href="https://www.linkedin.com/in/erpallavisharma"
+                 data-post-url=""
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
                 Read on LinkedIn
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
@@ -773,7 +813,10 @@
               <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
                 Every AI tool says it cites its sources. Mine cannot make one up. Not "tries not to." Cannot. The citation layer fails closed: if a quote can't be matched to something I actually saved, it never reaches me.
               </p>
-              <a href="#connect" class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
+              <a href="https://www.linkedin.com/in/erpallavisharma"
+                 data-post-url=""
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
                 Read on LinkedIn
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
