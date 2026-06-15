@@ -7,7 +7,8 @@
   <meta name="description" content="AI Product Lead at Amazon. Designed chips at Intel. Built cloud infrastructure at AWS. Ships agentic AI at enterprise scale." />
   <meta property="og:title" content="Pallavi Sharma — AI Product Leader" />
   <meta property="og:description" content="Silicon → Cloud → AI. I build AI systems that work when the demo is over." />
-  <meta property="og:image" content="assets/visuals/2026-05-08-silicon-to-ai-arc.png" />
+  <meta property="og:image" content="assets/visuals/og-default.png" />
+  <!-- OG IMAGE: replace with assets/hero.png once custom image is created -->
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -184,6 +185,10 @@
       background: #f59e0b;
       flex-shrink: 0;
     }
+
+    @keyframes ping {
+      75%, 100% { transform: scale(3.5); opacity: 0; }
+    }
   </style>
 </head>
 
@@ -244,7 +249,7 @@
             </h1>
 
             <p class="reveal reveal-delay-2 text-muted text-lg leading-relaxed mb-8 max-w-xl">
-              AI Product Lead at Amazon. Designed chips at Intel. Built cloud infrastructure at AWS. Ships agentic AI at enterprise scale. Also runs five personal AI systems — because the day job isn't enough.
+              AI Product Lead at Amazon. Designed chips at Intel. Built cloud infrastructure at AWS. Ships agentic AI at enterprise scale. Also builds five personal AI systems — because real understanding comes from shipping it yourself.
             </p>
 
             <!-- Stats row -->
@@ -282,15 +287,54 @@
             </div>
           </div>
 
-          <!-- Right: silicon arc image (desktop only) -->
-          <div class="hidden md:flex justify-center items-center">
-            <div class="relative">
-              <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/10 to-blue/5 blur-3xl scale-110"></div>
-              <img
-                src="assets/visuals/2026-05-08-silicon-to-ai-arc.png"
-                alt="Silicon to Cloud to AI arc — Pallavi Sharma's career trajectory from Intel chip design through AWS cloud to Amazon AI"
-                class="relative z-10 rounded-2xl shadow-2xl shadow-black/60 w-full max-w-lg object-cover"
-              />
+          <!-- Right: arc visualization — replace comment block below with <img> when hero image is ready -->
+          <!-- HERO IMAGE: when you have a custom image, delete this entire div and replace with:
+               <div class="hidden md:flex justify-center items-center">
+                 <img src="assets/hero.png" alt="Pallavi Sharma" class="rounded-2xl w-full max-w-lg shadow-2xl shadow-black/60" />
+               </div>
+          -->
+          <div class="hidden md:flex justify-center items-center" aria-hidden="true">
+            <div class="relative w-[400px] h-[400px]">
+              <!-- background dot grid -->
+              <div class="absolute inset-0 rounded-3xl"
+                   style="background-image: radial-gradient(circle, rgba(245,158,11,0.12) 1px, transparent 1px); background-size: 28px 28px; opacity:0.6;"></div>
+              <!-- outer glow -->
+              <div class="absolute inset-0 rounded-full bg-gradient-to-br from-gold/6 to-blue/4 blur-3xl scale-110"></div>
+              <!-- outer ring -->
+              <div class="absolute inset-6 rounded-full border border-gold/12"></div>
+              <!-- mid ring -->
+              <div class="absolute inset-[28%] rounded-full border border-white/8"></div>
+              <!-- inner ring -->
+              <div class="absolute inset-[42%] rounded-full border border-gold/20"></div>
+              <!-- center node -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-4 h-4 rounded-full bg-gold shadow-[0_0_24px_8px_rgba(245,158,11,0.35)]"></div>
+              </div>
+              <!-- orbit nodes -->
+              <!-- SILICON — top -->
+              <div class="absolute top-[8%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-gold/70 shadow-[0_0_10px_3px_rgba(245,158,11,0.4)]"></div>
+                <span class="text-[9px] font-mono tracking-[0.25em] text-gold/50 uppercase">Silicon</span>
+              </div>
+              <!-- CLOUD — right -->
+              <div class="absolute top-1/2 right-[6%] -translate-y-1/2 flex flex-col items-center gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-blue/70 shadow-[0_0_8px_3px_rgba(96,165,250,0.4)]"></div>
+                <span class="text-[9px] font-mono tracking-[0.25em] text-blue/50 uppercase">Cloud</span>
+              </div>
+              <!-- AI — bottom -->
+              <div class="absolute bottom-[8%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5">
+                <span class="text-[9px] font-mono tracking-[0.25em] text-gold/50 uppercase">AI</span>
+                <div class="w-3.5 h-3.5 rounded-full bg-gold shadow-[0_0_16px_6px_rgba(245,158,11,0.45)]"></div>
+              </div>
+              <!-- extra nodes -->
+              <div class="absolute top-[22%] left-[12%] w-2 h-2 rounded-full bg-white/20"></div>
+              <div class="absolute bottom-[22%] right-[12%] w-1.5 h-1.5 rounded-full bg-blue/40"></div>
+              <div class="absolute top-[60%] left-[8%] w-1.5 h-1.5 rounded-full bg-gold/30"></div>
+              <!-- pulse ring on center -->
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-4 h-4 rounded-full border border-gold/40"
+                     style="animation: ping 2.5s cubic-bezier(0,0,0.2,1) infinite;"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -489,54 +533,14 @@
             <span class="text-xs font-semibold tracking-widest text-gold uppercase">Personal Lab</span>
           </div>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">Pallavi AI Labs</h2>
-          <p class="text-muted text-lg max-w-2xl">Personal AI systems. All live. All solving real problems. Built evenings and weekends because the day job isn't enough.</p>
+          <p class="text-muted text-lg max-w-2xl">Personal AI systems. All live. All solving real problems. Built nights and weekends. Not obligation — obsession.</p>
         </div>
 
         <!-- Project cards grid -->
         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
 
-          <!-- Card 1: InHerVoice -->
+          <!-- Card 1: BrainSpark Academy -->
           <div class="reveal card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div class="text-3xl" aria-hidden="true">✍️</div>
-              <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
-                <span class="dot-live text-base leading-none">●</span> LIVE
-              </span>
-            </div>
-            <h3 class="text-lg font-bold text-text mb-1">InHerVoice</h3>
-            <p class="text-sm font-medium text-gold mb-3">AI PM Brand Builder</p>
-            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              Multi-agent content intelligence system that turns 15 years of enterprise depth and live personal AI builds into a respected AI PM voice on LinkedIn and Substack. Three-layer intelligence: live industry signals + career experience + active lab observations.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Claude Code</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Python</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Obsidian</span>
-            </div>
-          </div>
-
-          <!-- Card 2: Floppy -->
-          <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div class="text-3xl" aria-hidden="true">🏠</div>
-              <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
-                <span class="dot-live text-base leading-none">●</span> LIVE
-              </span>
-            </div>
-            <h3 class="text-lg font-bold text-text mb-1">Floppy</h3>
-            <p class="text-sm font-medium text-gold mb-3">Family AI Concierge</p>
-            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              Multi-agent system running daily household logistics for a working-parent family. Multi-rhythm planning (morning, 3PM, 4PM, nightly), domain-aware lookahead horizons (90 days for camps, 7 days for daily prep), dual runtime (OpenClaw production + Hermes shadow), agent society architecture. ~$40/month.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">OpenClaw</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Multi-agent</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Telegram</span>
-            </div>
-          </div>
-
-          <!-- Card 3: BrainSpark Academy -->
-          <div class="reveal reveal-delay-2 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
             <div class="flex items-start justify-between mb-4">
               <div class="text-3xl" aria-hidden="true">🎓</div>
               <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
@@ -560,8 +564,48 @@
             </a>
           </div>
 
+          <!-- Card 2: Floppy -->
+          <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div class="text-3xl" aria-hidden="true">👔</div>
+              <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
+                <span class="dot-live text-base leading-none">●</span> LIVE
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-text mb-1">Floppy</h3>
+            <p class="text-sm font-medium text-gold mb-3">Family Chief of Staff</p>
+            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
+              A multi-agent AI running daily household logistics for a working-parent family. Multi-rhythm planning across the full day, domain-aware lookahead (90 days for camps, 7 for daily prep), dual runtime with a shadow harness for safe testing, and an agent society that debates plans before they reach me.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">OpenClaw</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Multi-agent</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Telegram</span>
+            </div>
+          </div>
+
+          <!-- Card 3: InHerVoice -->
+          <div class="reveal reveal-delay-2 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div class="text-3xl" aria-hidden="true">✍️</div>
+              <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
+                <span class="dot-live text-base leading-none">●</span> LIVE
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-text mb-1">InHerVoice</h3>
+            <p class="text-sm font-medium text-gold mb-3">AI PM Brand Builder</p>
+            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
+              Multi-agent content intelligence system that turns 15 years of enterprise depth and live personal AI builds into a respected AI PM voice on LinkedIn and Substack. Three-layer intelligence: live industry signals + career experience + active lab observations.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Claude Code</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Python</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Obsidian</span>
+            </div>
+          </div>
+
           <!-- Card 4: SignalAtlas -->
-          <div class="reveal card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+          <div class="reveal reveal-delay-3 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
             <div class="flex items-start justify-between mb-4">
               <div class="text-3xl" aria-hidden="true">🗺️</div>
               <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
@@ -586,7 +630,7 @@
           </div>
 
           <!-- Card 5: Learning Brain -->
-          <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+          <div class="reveal reveal-delay-4 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
             <div class="flex items-start justify-between mb-4">
               <div class="text-3xl" aria-hidden="true">🧠</div>
               <span class="flex items-center gap-1.5 text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full border border-gold/20">
@@ -610,7 +654,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
-         WRITING — Signals from the Stack
+         WRITING — InHerVoice
     ════════════════════════════════════════════ -->
     <section id="writing" class="relative py-24 md:py-32">
       <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
@@ -621,7 +665,7 @@
           <div class="section-eyebrow">
             <span class="text-xs font-semibold tracking-widest text-gold uppercase">Writing</span>
           </div>
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">Signals from the Stack</h2>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">InHerVoice</h2>
           <p class="text-muted text-lg">Writing from the inside. Not commentary.</p>
         </div>
 
@@ -630,12 +674,12 @@
 
           <!-- Post 1: Featured/large -->
           <div class="reveal card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col md:row-span-1">
-            <div class="overflow-hidden">
-              <img
-                src="assets/visuals/2026-05-08-silicon-to-ai-arc.png"
-                alt="Silicon to AI arc — career trajectory illustration"
-                class="writing-img object-top hover:scale-105 transition-transform duration-500"
-              />
+            <!-- POST IMAGE: add your LinkedIn post image here — <img src="assets/visuals/FILENAME.jpg" alt="..." class="writing-img"> -->
+            <div class="writing-img relative overflow-hidden flex items-end p-5"
+                 style="background: linear-gradient(135deg, #1c1100 0%, #0d0c14 100%);">
+              <div class="absolute inset-0 opacity-[0.07]"
+                   style="background-image: radial-gradient(circle at 2px 2px, rgba(245,158,11,0.8) 1px, transparent 0); background-size: 22px 22px;"></div>
+              <span class="relative text-[10px] font-mono tracking-widest text-gold/50 uppercase">Intersection · May 2026</span>
             </div>
             <div class="p-6 flex flex-col flex-1">
               <div class="flex items-center gap-3 mb-4">
@@ -657,12 +701,12 @@
 
           <!-- Post 2 -->
           <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
-            <div class="overflow-hidden">
-              <img
-                src="assets/visuals/2026-05-21-seattle-shield-consent-default.png"
-                alt="Seattle Shield consent and default settings — enterprise AI identity illustration"
-                class="writing-img hover:scale-105 transition-transform duration-500"
-              />
+            <!-- POST IMAGE: add your LinkedIn post image here — <img src="assets/visuals/FILENAME.jpg" alt="..." class="writing-img"> -->
+            <div class="writing-img relative overflow-hidden flex items-end p-5"
+                 style="background: linear-gradient(135deg, #070f1c 0%, #0a0d14 100%);">
+              <div class="absolute inset-0 opacity-[0.07]"
+                   style="background-image: radial-gradient(circle at 2px 2px, rgba(96,165,250,0.8) 1px, transparent 0); background-size: 22px 22px;"></div>
+              <span class="relative text-[10px] font-mono tracking-widest text-blue/50 uppercase">Enterprise AI · June 2026</span>
             </div>
             <div class="p-6 flex flex-col flex-1">
               <div class="flex items-center gap-3 mb-4">
@@ -684,12 +728,12 @@
 
           <!-- Post 3 -->
           <div class="reveal reveal-delay-2 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
-            <div class="overflow-hidden">
-              <img
-                src="assets/visuals/2026-05-18-hyperscaler-chips-intel-foundry.png"
-                alt="Hyperscaler chips and Intel foundry — silicon supply chain illustration"
-                class="writing-img hover:scale-105 transition-transform duration-500"
-              />
+            <!-- POST IMAGE: add your LinkedIn post image here — <img src="assets/visuals/FILENAME.jpg" alt="..." class="writing-img"> -->
+            <div class="writing-img relative overflow-hidden flex items-end p-5"
+                 style="background: linear-gradient(135deg, #0c0c0e 0%, #111118 100%);">
+              <div class="absolute inset-0 opacity-[0.07]"
+                   style="background-image: radial-gradient(circle at 2px 2px, rgba(200,200,220,0.8) 1px, transparent 0); background-size: 22px 22px;"></div>
+              <span class="relative text-[10px] font-mono tracking-widest text-muted/60 uppercase">Silicon + Infra · May 2026</span>
             </div>
             <div class="p-6 flex flex-col flex-1">
               <div class="flex items-center gap-3 mb-4">
@@ -711,12 +755,12 @@
 
           <!-- Post 4 -->
           <div class="reveal reveal-delay-3 card-hover bg-surface border border-white/8 rounded-2xl overflow-hidden flex flex-col">
-            <div class="overflow-hidden">
-              <img
-                src="assets/visuals/2026-05-21-agent-eval-outcome-leaderboards.png"
-                alt="Agent evaluation outcome leaderboards — AI citation validation illustration"
-                class="writing-img hover:scale-105 transition-transform duration-500"
-              />
+            <!-- POST IMAGE: add your LinkedIn post image here — <img src="assets/visuals/FILENAME.jpg" alt="..." class="writing-img"> -->
+            <div class="writing-img relative overflow-hidden flex items-end p-5"
+                 style="background: linear-gradient(135deg, #081410 0%, #060c0a 100%);">
+              <div class="absolute inset-0 opacity-[0.07]"
+                   style="background-image: radial-gradient(circle at 2px 2px, rgba(52,211,153,0.8) 1px, transparent 0); background-size: 22px 22px;"></div>
+              <span class="relative text-[10px] font-mono tracking-widest text-emerald-500/50 uppercase">Personal AI · June 2026</span>
             </div>
             <div class="p-6 flex flex-col flex-1">
               <div class="flex items-center gap-3 mb-4">
@@ -810,9 +854,9 @@
                 <path d="M2 8l10 7 10-7" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="font-bold text-lg text-text mb-2">Signals from the Stack</h3>
+            <h3 class="font-bold text-lg text-text mb-2">Substack</h3>
             <p class="text-sm text-muted leading-relaxed flex-1 mb-6">
-              Weekly newsletter. Technical deep-dives on the posts. Free.
+              Signals from the Stack — weekly deep-dives on enterprise AI, silicon, and the systems I'm building. Free.
             </p>
             <a href="https://substack.com/@signalsfromthestack" target="_blank" rel="noopener noreferrer"
                class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors">
