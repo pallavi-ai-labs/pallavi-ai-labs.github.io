@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pallavi Sharma | AI Product Leader</title>
-  <meta name="description" content="AI Product Lead at Amazon. Designed chips at Intel. Built cloud infrastructure at AWS. Ships agentic AI at enterprise scale." />
+  <meta name="description" content="AI product leader and systems builder. Product lead for generative AI at Amazon, former Intel chip designer and AWS infrastructure PM, building agentic AI systems that earn trust." />
   <meta property="og:title" content="Pallavi Sharma | AI Product Leader" />
-  <meta property="og:description" content="Silicon → Cloud → AI. I build AI systems that work when the demo is over." />
+  <meta property="og:description" content="Silicon to cloud to agentic AI. I turn frontier AI into products people can actually trust." />
   <meta property="og:image" content="https://pallavi-ai-labs.github.io/assets/hero.png" />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://pallavi-ai-labs.github.io" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Pallavi Sharma | AI Product Leader" />
-  <meta name="twitter:description" content="Silicon to Cloud to AI. I build AI systems that work when the demo is over. AI Product Lead at Amazon. Ships agentic AI at enterprise scale." />
+  <meta name="twitter:description" content="AI product leader and systems builder. Silicon to cloud to agentic AI. I build systems that earn trust when the demo is over." />
   <meta name="twitter:image" content="https://pallavi-ai-labs.github.io/assets/hero.png" />
   <!-- ANALYTICS: Cloudflare Web Analytics (free, privacy-respecting — zero cookies, GDPR-safe)
        To activate: sign up at cloudflare.com → Analytics & Logs → Web Analytics → Add site → copy token
@@ -158,6 +158,48 @@
       background: linear-gradient(to bottom, rgba(245,158,11,0.55), rgba(96,165,250,0.12));
     }
 
+    .proof-tile {
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .brand-glow {
+      box-shadow: 0 24px 90px rgba(245,158,11,0.10), inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+    .operator-card {
+      background:
+        linear-gradient(135deg, rgba(245,158,11,0.08), transparent 42%),
+        linear-gradient(180deg, rgba(17,24,39,0.96), rgba(8,12,20,0.92));
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .signal-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.045);
+      color: #cbd5e1;
+      border-radius: 999px;
+      padding: 0.45rem 0.75rem;
+      font-size: 0.76rem;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .signal-pill::before {
+      content: '';
+      width: 0.42rem;
+      height: 0.42rem;
+      border-radius: 999px;
+      background: #f59e0b;
+      box-shadow: 0 0 18px rgba(245,158,11,0.55);
+      flex-shrink: 0;
+    }
+    .stack-card {
+      background: rgba(8,12,20,0.72);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
     /* ── Writing image ── */
     .writing-img {
       aspect-ratio: 16/9;
@@ -249,6 +291,8 @@
 
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-8">
+        <a href="#arc" class="text-muted hover:text-text text-sm font-medium transition-colors">Arc</a>
+        <a href="#operator" class="text-muted hover:text-text text-sm font-medium transition-colors">Edge</a>
         <a href="#projects" class="text-muted hover:text-text text-sm font-medium transition-colors">Projects</a>
         <a href="#writing"  class="text-muted hover:text-text text-sm font-medium transition-colors">Writing</a>
         <a href="#connect"  class="text-sm font-semibold px-4 py-2 rounded-full border border-gold/40 text-gold hover:bg-gold/10 transition-all">Connect</a>
@@ -264,6 +308,8 @@
 
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden flex-col bg-surface border-t border-white/5 mt-4 -mx-6 px-6 pb-4 pt-2">
+      <a href="#arc" class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Arc</a>
+      <a href="#operator" class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Edge</a>
       <a href="#projects" class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Projects</a>
       <a href="#writing"  class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Writing</a>
       <a href="#connect"  class="block py-3 text-gold font-semibold text-sm transition-colors">Connect</a>
@@ -283,17 +329,24 @@
 
           <!-- Left: text -->
           <div>
-            <div class="overline-badge reveal mb-6">Silicon → Cloud → Frontier AI</div>
+            <div class="overline-badge reveal mb-6">AI product leader + systems builder</div>
 
             <h1 class="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-text mb-6">
-              I build AI systems<br class="hidden md:block" />
-              that work when<br class="hidden md:block" />
-              the demo is over.
+              I turn frontier AI<br class="hidden md:block" />
+              into products people<br class="hidden md:block" />
+              can actually trust.
             </h1>
 
             <p class="reveal reveal-delay-2 text-muted text-lg leading-relaxed mb-8 max-w-xl">
-              AI Product Lead at Amazon. Designed chips at Intel. Built cloud infrastructure at AWS. Ships agentic AI at enterprise scale. Also builds and evolves five personal AI systems at the frontier. Real problems, real people, real productivity gains. Because genuine AI fluency comes from living with it, not just shipping it.
+              Product lead for generative AI at Amazon. Former Intel chip designer and AWS infrastructure PM. I build agentic systems from silicon-level constraints to enterprise governance to personal AI labs, then write about what survives contact with real users.
             </p>
+
+            <div class="reveal reveal-delay-2 flex flex-wrap gap-2.5 mb-8">
+              <span class="signal-pill">Agentic AI products</span>
+              <span class="signal-pill">Enterprise governance</span>
+              <span class="signal-pill">Builder velocity</span>
+              <span class="signal-pill">PM judgment</span>
+            </div>
 
             <!-- Stats row -->
             <div class="reveal reveal-delay-3 grid grid-cols-4 gap-4 mb-10 py-6 border-y border-white/8">
@@ -327,15 +380,48 @@
                 Signals from the Stack
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2h10v10M2 12L12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
+              <a href="#projects"
+                 class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gold/25 text-gold font-medium text-sm hover:border-gold/50 hover:bg-gold/10 transition-all">
+                See the lab
+              </a>
             </div>
           </div>
 
-          <div class="hidden md:flex justify-center items-center">
+          <div class="hidden md:flex justify-center items-center relative">
             <img
               src="assets/hero.png"
               alt="Silicon to Cloud to AI — Pallavi Sharma's career arc from Intel chip design through AWS cloud infrastructure to Amazon AI agents"
-              class="rounded-2xl w-full max-w-lg shadow-2xl shadow-black/60 object-cover"
+              class="rounded-2xl w-full max-w-lg shadow-2xl shadow-black/60 object-cover brand-glow"
             />
+            <div class="absolute -bottom-7 -left-8 stack-card rounded-2xl p-5 max-w-xs shadow-2xl shadow-black/50">
+              <p class="text-[11px] tracking-[0.18em] uppercase text-gold font-semibold mb-2">Builder proof</p>
+              <p class="text-sm text-text font-semibold leading-snug mb-2">Enterprise AI at scale. Personal AI in the wild. Same discipline.</p>
+              <p class="text-xs text-muted leading-relaxed">Every lab project is a test bed for product sense, orchestration, safety, evals, and UX.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand proof strip -->
+    <section class="relative border-y border-white/8 bg-surface/70">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 py-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div class="proof-tile rounded-xl p-4">
+            <p class="text-xs uppercase tracking-[0.16em] text-muted/70 mb-2">Enterprise scale</p>
+            <p class="text-lg font-bold text-text">130K-user first deployment</p>
+          </div>
+          <div class="proof-tile rounded-xl p-4">
+            <p class="text-xs uppercase tracking-[0.16em] text-muted/70 mb-2">Full-stack range</p>
+            <p class="text-lg font-bold text-text">Silicon to cloud to agents</p>
+          </div>
+          <div class="proof-tile rounded-xl p-4">
+            <p class="text-xs uppercase tracking-[0.16em] text-muted/70 mb-2">Builder credibility</p>
+            <p class="text-lg font-bold text-text">5 live personal AI systems</p>
+          </div>
+          <div class="proof-tile rounded-xl p-4">
+            <p class="text-xs uppercase tracking-[0.16em] text-muted/70 mb-2">Product lens</p>
+            <p class="text-lg font-bold text-text">Trust, adoption, governance</p>
           </div>
         </div>
       </div>
@@ -520,6 +606,65 @@
       </div>
     </section>
 
+    <!-- Operator edge -->
+    <section id="operator" class="relative py-24 md:py-32 bg-bg">
+      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-16 items-start">
+          <div class="reveal">
+            <div class="section-eyebrow">
+              <span class="text-xs font-semibold tracking-widest text-gold uppercase">The edge</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-5">
+              I bring builder instincts to AI product strategy.
+            </h2>
+            <p class="text-muted text-lg leading-relaxed mb-7">
+              The strongest AI PMs are not prompt tourists. They understand model behavior, workflow design, governance, cost, evals, and the messy adoption reality inside real organizations. That is the lane I operate in.
+            </p>
+            <a href="#connect" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-bg font-semibold text-sm hover:bg-amber-400 transition-all shadow-lg shadow-gold/20">
+              Start a conversation
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-5">
+            <div class="reveal reveal-delay-1 operator-card rounded-2xl p-6 card-hover">
+              <p class="text-xs font-semibold tracking-[0.16em] text-gold uppercase mb-4">01 / Product judgment</p>
+              <h3 class="font-bold text-xl text-text mb-3">Opinionated, not vague.</h3>
+              <p class="text-sm text-muted leading-relaxed">
+                I turn ambiguous AI capability into clear product bets: who it is for, where it fits, what it replaces, and which risks must be designed out before scale.
+              </p>
+            </div>
+
+            <div class="reveal reveal-delay-2 operator-card rounded-2xl p-6 card-hover">
+              <p class="text-xs font-semibold tracking-[0.16em] text-blue uppercase mb-4">02 / Systems thinking</p>
+              <h3 class="font-bold text-xl text-text mb-3">Architecture-aware PM.</h3>
+              <p class="text-sm text-muted leading-relaxed">
+                Silicon taught me constraints. Cloud taught me reliability. Agentic AI taught me orchestration, memory, evals, and failure recovery.
+              </p>
+            </div>
+
+            <div class="reveal reveal-delay-3 operator-card rounded-2xl p-6 card-hover">
+              <p class="text-xs font-semibold tracking-[0.16em] text-gold uppercase mb-4">03 / Enterprise reality</p>
+              <h3 class="font-bold text-xl text-text mb-3">Governance is product.</h3>
+              <p class="text-sm text-muted leading-relaxed">
+                I design for data boundaries, grounding, identity, observability, and admin control because enterprise trust is earned in the boring edge cases.
+              </p>
+            </div>
+
+            <div class="reveal reveal-delay-4 operator-card rounded-2xl p-6 card-hover">
+              <p class="text-xs font-semibold tracking-[0.16em] text-blue uppercase mb-4">04 / Builder velocity</p>
+              <h3 class="font-bold text-xl text-text mb-3">I prototype what I argue.</h3>
+              <p class="text-sm text-muted leading-relaxed">
+                The lab projects are not portfolio decoration. They are working systems where I test AI UX, agent boundaries, cost routing, and learning loops.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══════════════════════════════════════════
          PALLAVI AI LABS — Projects
     ════════════════════════════════════════════ -->
@@ -533,7 +678,9 @@
             <span class="text-xs font-semibold tracking-widest text-gold uppercase">Personal Lab</span>
           </div>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">Pallavi AI Labs</h2>
-          <p class="text-muted text-lg max-w-2xl">Personal AI systems. All live. All solving real problems. Built nights and weekends. Not obligation. Obsession.</p>
+          <p class="text-muted text-lg max-w-3xl">
+            The lab is my unfair advantage: live systems that force real product decisions around agents, memory, voice, evals, cost, safety, and user trust. It is where I test the future before it becomes a roadmap slide.
+          </p>
         </div>
 
         <!-- Project cards grid -->
@@ -917,7 +1064,24 @@
             <span class="text-xs font-semibold tracking-widest text-gold uppercase">Get in touch</span>
           </div>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">Connect</h2>
-          <p class="text-muted text-lg">I reply to thoughtful messages. Usually within 24 hours.</p>
+          <p class="text-muted text-lg max-w-2xl mx-auto">
+            Reach out if you are building AI products that need to move from impressive prototype to trusted system.
+          </p>
+        </div>
+
+        <div class="reveal grid md:grid-cols-3 gap-4 mb-10">
+          <div class="proof-tile rounded-2xl p-5">
+            <p class="text-xs font-semibold tracking-[0.16em] text-gold uppercase mb-3">Talk to me about</p>
+            <p class="text-sm text-muted leading-relaxed">Agentic product strategy, enterprise adoption, evals, AI UX, governance, and systems that need to earn trust.</p>
+          </div>
+          <div class="proof-tile rounded-2xl p-5">
+            <p class="text-xs font-semibold tracking-[0.16em] text-gold uppercase mb-3">What I bring</p>
+            <p class="text-sm text-muted leading-relaxed">A rare stack: hardware rigor, cloud reliability, enterprise PM judgment, and hands-on AI building velocity.</p>
+          </div>
+          <div class="proof-tile rounded-2xl p-5">
+            <p class="text-xs font-semibold tracking-[0.16em] text-gold uppercase mb-3">Best fit</p>
+            <p class="text-sm text-muted leading-relaxed">AI product leadership, founder/operator conversations, speaking, advisory, writing, and serious builder exchanges.</p>
+          </div>
         </div>
 
         <!-- Connect cards -->
