@@ -63,6 +63,32 @@ Copy an existing project card `<div class="reveal card-hover ...">...</div>` and
 
 ---
 
+## How to Talk About Floppy Publicly
+
+Floppy is a strong brand proof point because it shows Pallavi building agentic
+AI in a real operating environment, not only writing about it. Keep the public
+positioning focused on the architecture and product lessons:
+
+- chief-of-staff AI
+- multi-agent orchestration
+- memory and personalization
+- approval-aware execution
+- evals, drift detection, and self-improvement
+- cost discipline and graceful failure
+
+Do not publish private household details, live schedules, names, addresses,
+account names, credentials, Telegram links, calendar details, school/provider
+details, shopping lists, or operational logs. The public lesson is the system
+design, not the family's private data.
+
+When editing the Floppy section, preserve the core message:
+
+> Floppy is where agentic AI is tested against real life: changing context,
+> partial information, long-running preferences, consent boundaries, and
+> operational follow-through.
+
+---
+
 ## How to Update Placeholder Links
 
 Search for `<!-- UPDATE:` in `index.html`. Currently flagged:

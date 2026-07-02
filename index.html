@@ -125,6 +125,39 @@
       border-color: rgba(245,158,11,0.25) !important;
     }
 
+    .floppy-panel {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(245,158,11,0.12), transparent 32%),
+        radial-gradient(circle at 85% 15%, rgba(96,165,250,0.11), transparent 34%),
+        linear-gradient(135deg, rgba(17,24,39,0.98), rgba(8,12,20,0.98));
+    }
+    .floppy-panel::before {
+      content: '';
+      position: absolute;
+      inset: 1px;
+      border-radius: 1rem;
+      border: 1px solid rgba(255,255,255,0.06);
+      pointer-events: none;
+    }
+    .floppy-signal {
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .floppy-thread {
+      position: relative;
+    }
+    .floppy-thread::before {
+      content: '';
+      position: absolute;
+      top: 18px;
+      bottom: 18px;
+      left: 18px;
+      width: 1px;
+      background: linear-gradient(to bottom, rgba(245,158,11,0.55), rgba(96,165,250,0.12));
+    }
+
     /* ── Writing image ── */
     .writing-img {
       aspect-ratio: 16/9;
@@ -565,14 +598,14 @@
               </span>
             </div>
             <h3 class="text-lg font-bold text-text mb-1">Floppy</h3>
-            <p class="text-sm font-medium text-gold mb-3">Family Chief of Staff</p>
+            <p class="text-sm font-medium text-gold mb-3">Private AI Chief of Staff</p>
             <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              A multi-user, hyper-personalized AI running daily household logistics for a working-parent family. Multi-rhythm planning across the full day, domain-aware lookahead (90 days for camps, 7 for daily prep), dual runtime with a shadow harness for safe testing, and an agent society that debates plans before they reach me.
+              A private, multi-agent chief-of-staff system for real household operations. It turns inbox, calendar, tasks, meals, shopping, and long-horizon planning into daily intelligence, approval-ready actions, and a learning memory loop. Built to test whether personal AI can reduce cognitive load without becoming unsafe or noisy.
             </p>
             <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">OpenClaw</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Chief-of-staff AI</span>
               <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Multi-agent</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Telegram</span>
+              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Eval-driven</span>
             </div>
           </div>
 
@@ -644,6 +677,74 @@
           </div>
 
         </div><!-- /grid -->
+
+        <!-- Floppy featured proof point -->
+        <div class="reveal floppy-panel mt-8 rounded-2xl border border-gold/20 p-6 md:p-8 lg:p-10">
+          <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 lg:gap-12 items-start">
+            <div>
+              <div class="flex flex-wrap items-center gap-3 mb-5">
+                <span class="text-[11px] font-semibold tracking-[0.18em] text-gold uppercase bg-gold/10 border border-gold/25 rounded-full px-3 py-1">Field System</span>
+                <span class="text-[11px] font-semibold tracking-[0.18em] text-blue uppercase bg-blue/10 border border-blue/20 rounded-full px-3 py-1">Private by design</span>
+              </div>
+              <h3 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-text mb-4">
+                Floppy is where I test agentic AI against real life, not a demo script.
+              </h3>
+              <p class="text-muted text-base md:text-lg leading-relaxed mb-6 max-w-3xl">
+                Enterprise AI usually gets evaluated in controlled workflows. Floppy lives in the messier environment: changing schedules, partial information, long-running preferences, competing priorities, and actions that need consent. The public lesson is not the private data. The lesson is the operating model: memory, orchestration, guardrails, evals, and graceful failure.
+              </p>
+              <div class="grid sm:grid-cols-3 gap-3">
+                <div class="floppy-signal rounded-xl p-4">
+                  <p class="text-2xl font-extrabold text-gold mb-1">Multi-rhythm</p>
+                  <p class="text-xs text-muted leading-relaxed">Morning priorities, afternoon planning, lookahead scans, nightly learning.</p>
+                </div>
+                <div class="floppy-signal rounded-xl p-4">
+                  <p class="text-2xl font-extrabold text-gold mb-1">Approval-first</p>
+                  <p class="text-xs text-muted leading-relaxed">Agents can prepare actions, but sensitive execution requires consent.</p>
+                </div>
+                <div class="floppy-signal rounded-xl p-4">
+                  <p class="text-2xl font-extrabold text-gold mb-1">Evals loop</p>
+                  <p class="text-xs text-muted leading-relaxed">Code checks, LLM review queues, and human feedback decide what earns autonomy.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="floppy-thread bg-bg/45 border border-white/8 rounded-2xl p-5 md:p-6">
+              <p class="text-xs font-semibold tracking-[0.18em] text-muted/70 uppercase mb-5">How it works</p>
+
+              <div class="relative z-10 flex gap-4 mb-5">
+                <div class="w-9 h-9 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xs font-bold text-gold flex-shrink-0">1</div>
+                <div>
+                  <h4 class="font-semibold text-text mb-1">Signals come in</h4>
+                  <p class="text-sm text-muted leading-relaxed">Calendar, inbox, tasks, memory, public context, and user corrections become structured inputs.</p>
+                </div>
+              </div>
+
+              <div class="relative z-10 flex gap-4 mb-5">
+                <div class="w-9 h-9 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xs font-bold text-gold flex-shrink-0">2</div>
+                <div>
+                  <h4 class="font-semibold text-text mb-1">Specialists reason together</h4>
+                  <p class="text-sm text-muted leading-relaxed">Domain agents handle scheduling, jobs, meals, shopping, discovery, and operations with clear boundaries.</p>
+                </div>
+              </div>
+
+              <div class="relative z-10 flex gap-4 mb-5">
+                <div class="w-9 h-9 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xs font-bold text-gold flex-shrink-0">3</div>
+                <div>
+                  <h4 class="font-semibold text-text mb-1">Actions are prepared, not assumed</h4>
+                  <p class="text-sm text-muted leading-relaxed">Drafts, plans, calendar candidates, shopping deltas, and recommendations are packaged for the smallest useful approval.</p>
+                </div>
+              </div>
+
+              <div class="relative z-10 flex gap-4">
+                <div class="w-9 h-9 rounded-full bg-blue/15 border border-blue/30 flex items-center justify-center text-xs font-bold text-blue flex-shrink-0">4</div>
+                <div>
+                  <h4 class="font-semibold text-text mb-1">The system learns safely</h4>
+                  <p class="text-sm text-muted leading-relaxed">Corrections update durable memory, repeated mistakes create drift incidents, and automation expands only when evidence supports it.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
