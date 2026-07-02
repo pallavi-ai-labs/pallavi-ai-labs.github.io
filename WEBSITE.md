@@ -22,6 +22,10 @@ docs/
 
 Everything is in `index.html`. No build step. No framework. Edit HTML directly and push.
 
+The repo includes `.nojekyll` because this is a plain static site, not a Jekyll
+site. Keep it so GitHub Pages serves the root HTML/assets directly and does not
+run unnecessary Jekyll processing during deployment.
+
 ---
 
 ## How to Update the Writing Section
