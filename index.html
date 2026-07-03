@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pallavi Sharma | AI Product Leader</title>
-  <meta name="description" content="Pallavi Sharma is an AI product leader and builder working across generative AI, cloud infrastructure, silicon, and personal AI systems." />
+  <meta name="description" content="Pallavi Sharma builds AI products for real workflows, combining product judgment with systems depth across generative AI, cloud, and silicon." />
   <meta property="og:title" content="Pallavi Sharma | AI Product Leader" />
-  <meta property="og:description" content="AI product leadership, systems thinking, and hands-on personal AI builds from silicon to cloud to agents." />
+  <meta property="og:description" content="AI product leadership, systems thinking, and hands-on builds across generative AI, cloud, and agents." />
   <meta property="og:image" content="https://pallavi-ai-labs.github.io/assets/hero.png" />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://pallavi-ai-labs.github.io" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Pallavi Sharma | AI Product Leader" />
-  <meta name="twitter:description" content="AI product leadership, systems thinking, and hands-on personal AI builds from silicon to cloud to agents." />
+  <meta name="twitter:description" content="AI product leadership, systems thinking, and hands-on builds across generative AI, cloud, and agents." />
   <meta name="twitter:image" content="https://pallavi-ai-labs.github.io/assets/hero.png" />
   <!-- ANALYTICS: Cloudflare Web Analytics (free, privacy-respecting — zero cookies, GDPR-safe)
        To activate: sign up at cloudflare.com → Analytics & Logs → Web Analytics → Add site → copy token
@@ -199,55 +199,65 @@
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
-    .floppy-arch {
-      position: relative;
-      display: grid;
-      gap: 0.75rem;
-    }
-    .floppy-arch-node {
-      position: relative;
-      z-index: 1;
+    .floppy-session {
+      background: rgba(8,12,20,0.66);
       border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.045);
-      border-radius: 1rem;
-      padding: 0.9rem 1rem;
+      border-radius: 1.25rem;
+      overflow: hidden;
     }
-    .floppy-arch-node.center {
-      background: linear-gradient(135deg, rgba(245,158,11,0.18), rgba(96,165,250,0.08));
-      border-color: rgba(245,158,11,0.28);
+    .floppy-session-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.035);
     }
-    .floppy-arch-label {
-      display: block;
-      font-size: 0.68rem;
-      letter-spacing: 0.16em;
+    .agent-line {
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 0.95rem 1rem;
+    }
+    .agent-line:last-child {
+      border-bottom: 0;
+    }
+    .agent-role {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
+      font-weight: 800;
       color: #f59e0b;
-      font-weight: 700;
       margin-bottom: 0.35rem;
     }
-    .floppy-arch-title {
-      color: #f1f5f9;
-      font-size: 0.95rem;
-      font-weight: 700;
-      line-height: 1.25;
+    .agent-dot {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 999px;
+      background: #f59e0b;
+      box-shadow: 0 0 14px rgba(245,158,11,0.5);
     }
-    .floppy-arch-copy {
-      color: #94a3b8;
-      font-size: 0.78rem;
-      line-height: 1.45;
-      margin-top: 0.25rem;
+    .agent-line p {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 1.55;
     }
-    .floppy-arch-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.75rem;
+    .flow-card {
+      background: rgba(8,12,20,0.56);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 1.25rem;
     }
-    .floppy-arrow {
-      color: rgba(245,158,11,0.72);
-      text-align: center;
-      font-size: 1rem;
-      line-height: 1;
-      margin: -0.1rem 0;
+    .flow-card summary {
+      cursor: pointer;
+      list-style: none;
+    }
+    .flow-card summary::-webkit-details-marker {
+      display: none;
+    }
+    .flow-diagram text {
+      font-family: Inter, sans-serif;
     }
 
     /* ── Writing image ── */
@@ -341,8 +351,8 @@
 
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-8">
-        <a href="#arc" class="text-muted hover:text-text text-sm font-medium transition-colors">Arc</a>
-        <a href="#operator" class="text-muted hover:text-text text-sm font-medium transition-colors">Edge</a>
+        <a href="#arc" class="text-muted hover:text-text text-sm font-medium transition-colors">Work</a>
+        <a href="#operator" class="text-muted hover:text-text text-sm font-medium transition-colors">Approach</a>
         <a href="#projects" class="text-muted hover:text-text text-sm font-medium transition-colors">Projects</a>
         <a href="#writing"  class="text-muted hover:text-text text-sm font-medium transition-colors">Writing</a>
         <a href="#connect"  class="text-sm font-semibold px-4 py-2 rounded-full border border-gold/40 text-gold hover:bg-gold/10 transition-all">Connect</a>
@@ -358,8 +368,8 @@
 
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden flex-col bg-surface border-t border-white/5 mt-4 -mx-6 px-6 pb-4 pt-2">
-      <a href="#arc" class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Arc</a>
-      <a href="#operator" class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Edge</a>
+      <a href="#arc" class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Work</a>
+      <a href="#operator" class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Approach</a>
       <a href="#projects" class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Projects</a>
       <a href="#writing"  class="block py-3 text-muted hover:text-text text-sm font-medium transition-colors border-b border-white/5">Writing</a>
       <a href="#connect"  class="block py-3 text-gold font-semibold text-sm transition-colors">Connect</a>
@@ -379,23 +389,22 @@
 
           <!-- Left: text -->
           <div>
-            <div class="overline-badge reveal mb-6">AI product leader + builder</div>
+            <div class="overline-badge reveal mb-6">AI product + systems builder</div>
 
             <h1 class="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-text mb-6">
               I build AI products<br class="hidden md:block" />
-              with a product mind<br class="hidden md:block" />
-              and an engineer's respect for systems.
+              that work in real workflows.
             </h1>
 
             <p class="reveal reveal-delay-2 text-muted text-lg leading-relaxed mb-8 max-w-xl">
-              I work on generative AI products at Amazon, after years in chip design at Intel and cloud infrastructure at AWS. On the side, I build small AI systems for real workflows so my product judgment stays close to the technology, the failure modes, and the user experience.
+              My work spans generative AI, cloud infrastructure, and chip design. I care about whether AI products are useful after the demo: clear user value, reliable systems, sane cost, and trust boundaries that hold up in practice.
             </p>
 
             <div class="reveal reveal-delay-2 flex flex-wrap gap-2.5 mb-8">
-              <span class="signal-pill">Agentic AI products</span>
-              <span class="signal-pill">Enterprise governance</span>
-              <span class="signal-pill">Hands-on builder</span>
-              <span class="signal-pill">PM judgment</span>
+              <span class="signal-pill">Enterprise AI</span>
+              <span class="signal-pill">Agentic systems</span>
+              <span class="signal-pill">Builder-PM</span>
+              <span class="signal-pill">Trust and evals</span>
             </div>
 
             <!-- Stats row -->
@@ -440,13 +449,13 @@
           <div class="hidden md:flex justify-center items-center relative">
             <img
               src="assets/hero.png"
-              alt="Silicon to Cloud to AI — Pallavi Sharma's career arc from Intel chip design through AWS cloud infrastructure to Amazon AI agents"
+              alt="Pallavi Sharma's work across silicon, cloud infrastructure, and AI products"
               class="rounded-2xl w-full max-w-lg shadow-2xl shadow-black/60 object-cover brand-glow"
             />
             <div class="absolute -bottom-7 -left-8 stack-card rounded-2xl p-5 max-w-xs shadow-2xl shadow-black/50">
               <p class="text-[11px] tracking-[0.18em] uppercase text-gold font-semibold mb-2">Builder proof</p>
-              <p class="text-sm text-text font-semibold leading-snug mb-2">I learn by building the systems I want to understand.</p>
-              <p class="text-xs text-muted leading-relaxed">The lab projects are where I test product ideas around agents, memory, evals, safety, and UX.</p>
+              <p class="text-sm text-text font-semibold leading-snug mb-2">I use small builds to sharpen product judgment.</p>
+              <p class="text-xs text-muted leading-relaxed">The lab projects test agents, memory, evals, safety, and UX in real workflows.</p>
             </div>
           </div>
         </div>
@@ -463,11 +472,11 @@
           </div>
           <div class="proof-tile rounded-xl p-4">
             <p class="text-xs uppercase tracking-[0.16em] text-muted/70 mb-2">Full-stack range</p>
-            <p class="text-lg font-bold text-text">Silicon to cloud to agents</p>
+            <p class="text-lg font-bold text-text">Silicon, cloud, AI</p>
           </div>
           <div class="proof-tile rounded-xl p-4">
             <p class="text-xs uppercase tracking-[0.16em] text-muted/70 mb-2">Builder credibility</p>
-            <p class="text-lg font-bold text-text">Personal AI systems in progress</p>
+            <p class="text-lg font-bold text-text">Hands-on AI lab</p>
           </div>
           <div class="proof-tile rounded-xl p-4">
             <p class="text-xs uppercase tracking-[0.16em] text-muted/70 mb-2">Product lens</p>
@@ -490,8 +499,8 @@
           <div class="section-eyebrow">
             <span class="text-xs font-semibold tracking-widest text-gold uppercase">Career</span>
           </div>
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">The Arc</h2>
-          <p class="text-muted text-lg max-w-xl">Three layers of the stack. One builder's compounding edge.</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">Work Across the Stack</h2>
+          <p class="text-muted text-lg max-w-xl">Silicon, cloud infrastructure, and AI products. The through-line is building useful systems under real constraints.</p>
         </div>
 
         <!-- Desktop timeline -->
@@ -656,7 +665,7 @@
       </div>
     </section>
 
-    <!-- Operator edge -->
+    <!-- Product approach -->
     <section id="operator" class="relative py-24 md:py-32 bg-bg">
       <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
@@ -664,13 +673,13 @@
         <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-16 items-start">
           <div class="reveal">
             <div class="section-eyebrow">
-              <span class="text-xs font-semibold tracking-widest text-gold uppercase">The edge</span>
+              <span class="text-xs font-semibold tracking-widest text-gold uppercase">Approach</span>
             </div>
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-5">
-              My product work is shaped by building, not just analysis.
+              My product work is shaped by building, shipping, and learning from failure modes.
             </h2>
             <p class="text-muted text-lg leading-relaxed mb-7">
-              I care about the practical parts of AI that decide whether a product is useful after the first impressive demo: workflow fit, trust, cost, governance, evals, and the quiet failure modes users remember.
+              I focus on the parts that make AI products usable in practice: workflow fit, trust, cost, governance, evals, and recovery when the system is wrong.
             </p>
             <a href="#connect" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-bg font-semibold text-sm hover:bg-amber-400 transition-all shadow-lg shadow-gold/20">
               Start a conversation
@@ -699,7 +708,7 @@
               <p class="text-xs font-semibold tracking-[0.16em] text-gold uppercase mb-4">03 / Enterprise reality</p>
               <h3 class="font-bold text-xl text-text mb-3">Governance is product.</h3>
               <p class="text-sm text-muted leading-relaxed">
-                I design for data boundaries, grounding, identity, observability, and admin control because enterprise trust is earned in the boring edge cases.
+                I design for data boundaries, grounding, identity, observability, and admin control because enterprise trust is earned in the operational details.
               </p>
             </div>
 
@@ -729,7 +738,7 @@
           </div>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">Pallavi AI Labs</h2>
           <p class="text-muted text-lg max-w-3xl">
-            The lab is where I practice. These projects let me explore agents, memory, voice, evals, cost, safety, and user trust in concrete systems instead of only talking about them abstractly.
+            Small builds I use to test product ideas: agents, memory, voice, evals, cost, safety, and user trust. Some are demos. Some are private systems. All are meant to make the product thinking concrete.
           </p>
         </div>
 
@@ -745,9 +754,9 @@
               </span>
             </div>
             <h3 class="text-lg font-bold text-text mb-1">ProductCouncil</h3>
-            <p class="text-sm font-medium text-gold mb-3">The Full PM Function, as a Council of AI Leaders</p>
+            <p class="text-sm font-medium text-gold mb-3">Multi-agent product council</p>
             <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              A product-management workspace built around a council of specialist agents: visionary, craftsperson, operator, advisor, critic, market analyst, UX designer, senior engineer, finance, sales, and marketing. What is exciting to me is the system shape: Fable 5 agent orchestration, Hermes-backed workflows, multi-tenant architecture, Vercel deployment, 32 skill playbooks, and artifacts that are red-teamed before they are treated as done.
+              A product workspace where specialist agents debate a decision, create artifacts, and critique the output before it is treated as done. The council includes product, UX, engineering, market, finance, sales, and marketing seats. The system runs on Fable 5 orchestration, Hermes-backed workflows, multi-tenant architecture, Vercel deployment, and 32 reusable skill playbooks.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Fable 5</span>
@@ -774,7 +783,7 @@
             <h3 class="text-lg font-bold text-text mb-1">BrainSpark Academy</h3>
             <p class="text-sm font-medium text-gold mb-3">AI Learning Companion for Children</p>
             <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              Tablet-first AI tutoring app. Five subjects: Math, English, French, Hindi, Spanish. Voice input and read-aloud for special needs kids. Parent dashboard with provider selection and usage controls. Built for underserved communities globally.
+              Tablet-first tutoring prototype across Math, English, French, Hindi, and Spanish. It explores voice input, read-aloud support, parent controls, and provider choice in one child-friendly learning surface.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">React PWA</span>
@@ -799,7 +808,7 @@
             <h3 class="text-lg font-bold text-text mb-1">Floppy</h3>
             <p class="text-sm font-medium text-gold mb-3">Private AI Chief of Staff</p>
             <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              A private, multi-agent chief-of-staff system for real household operations. It turns inbox, calendar, tasks, meals, shopping, and long-horizon planning into daily intelligence, approval-ready actions, and a learning memory loop. Built to test whether personal AI can reduce cognitive load without becoming unsafe or noisy.
+              A private multi-agent system for household operations. It connects inbox, calendar, tasks, meals, shopping, and planning into daily intelligence, approval-ready actions, and a memory loop. The product question: can personal AI reduce mental load without becoming unsafe or noisy?
             </p>
             <div class="flex flex-wrap gap-2 mt-auto">
               <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Chief-of-staff AI</span>
@@ -819,7 +828,7 @@
             <h3 class="text-lg font-bold text-text mb-1">SignalAtlas</h3>
             <p class="text-sm font-medium text-gold mb-3">Decision Intelligence for Global Cities</p>
             <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              Investment and business opportunity discovery across global cities. Opinionated product: translates city data into a city thesis, investor lens, business lens, and next-click paths. Not a metrics dashboard. Multi-agent architecture for real-time signal synthesis.
+              A city-research product that turns global city signals into a thesis, investor lens, business lens, and next steps. The goal is not another dashboard; it is faster sense-making from messy regional data.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Next.js</span>
@@ -844,7 +853,7 @@
             <h3 class="text-lg font-bold text-text mb-1">InHerVoice</h3>
             <p class="text-sm font-medium text-gold mb-3">AI PM Brand Builder</p>
             <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              Multi-agent content intelligence system that turns 15 years of enterprise depth and live personal AI builds into a respected AI PM voice on LinkedIn and Substack. Three-layer intelligence: live industry signals + career experience + active lab observations.
+              A content workflow that helps turn product experience, current AI signals, and lab observations into clearer writing. It is designed to support a consistent voice without outsourcing judgment.
             </p>
             <div class="flex flex-wrap gap-2 mt-auto">
               <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Claude Code</span>
@@ -879,80 +888,142 @@
 
         <!-- Floppy featured proof point -->
         <div class="reveal floppy-panel mt-8 rounded-2xl border border-gold/20 p-6 md:p-8 lg:p-10">
-          <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 lg:gap-12 items-start">
+          <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-12 items-start">
             <div>
               <div class="flex flex-wrap items-center gap-3 mb-5">
-                <span class="text-[11px] font-semibold tracking-[0.18em] text-gold uppercase bg-gold/10 border border-gold/25 rounded-full px-3 py-1">Field System</span>
-                <span class="text-[11px] font-semibold tracking-[0.18em] text-blue uppercase bg-blue/10 border border-blue/20 rounded-full px-3 py-1">Private by design</span>
+                <span class="text-[11px] font-semibold tracking-[0.18em] text-gold uppercase bg-gold/10 border border-gold/25 rounded-full px-3 py-1">Private field system</span>
+                <span class="text-[11px] font-semibold tracking-[0.18em] text-blue uppercase bg-blue/10 border border-blue/20 rounded-full px-3 py-1">Repo-backed workflows</span>
               </div>
               <h3 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-text mb-4">
-                Floppy is my private test bed for agentic AI in everyday life.
+                Floppy tests what a personal chief of staff should actually do.
               </h3>
               <p class="text-muted text-base md:text-lg leading-relaxed mb-6 max-w-3xl">
-                I do not talk publicly about the private data inside it. What is useful to share is the product architecture: how a personal AI system handles messy signals, memory, specialist agents, approvals, evals, and graceful recovery when something goes wrong.
+                It connects signals from inbox, calendar, tasks, memory, location, and public sources; routes work to specialist agents; asks for approval before sensitive actions; and writes outcomes back into memory so the system improves instead of drifting.
               </p>
               <div class="grid sm:grid-cols-3 gap-3">
                 <div class="floppy-signal rounded-xl p-4">
-                  <p class="text-2xl font-extrabold text-gold mb-1">Multi-rhythm</p>
-                  <p class="text-xs text-muted leading-relaxed">Morning priorities, afternoon planning, lookahead scans, nightly learning.</p>
+                  <p class="text-lg font-extrabold text-gold mb-1">Sees ahead</p>
+                  <p class="text-xs text-muted leading-relaxed">Briefs, lookahead scans, prep tasks, and unscheduled event detection.</p>
                 </div>
                 <div class="floppy-signal rounded-xl p-4">
-                  <p class="text-2xl font-extrabold text-gold mb-1">Approval-first</p>
-                  <p class="text-xs text-muted leading-relaxed">Agents can prepare actions, but sensitive execution requires consent.</p>
+                  <p class="text-lg font-extrabold text-gold mb-1">Acts with consent</p>
+                  <p class="text-xs text-muted leading-relaxed">Drafts, reminders, calendar writes, carts, and bookings are approval-aware.</p>
                 </div>
                 <div class="floppy-signal rounded-xl p-4">
-                  <p class="text-2xl font-extrabold text-gold mb-1">Evals loop</p>
-                  <p class="text-xs text-muted leading-relaxed">Code checks, LLM review queues, and human feedback decide what earns autonomy.</p>
+                  <p class="text-lg font-extrabold text-gold mb-1">Learns safely</p>
+                  <p class="text-xs text-muted leading-relaxed">Corrections, evals, drift checks, and memory promotion keep it honest.</p>
                 </div>
               </div>
             </div>
 
-            <div class="bg-bg/45 border border-white/8 rounded-2xl p-5 md:p-6">
-              <p class="text-xs font-semibold tracking-[0.18em] text-muted/70 uppercase mb-5">Architecture sketch</p>
-
-              <div class="floppy-arch" aria-label="Floppy architecture diagram">
-                <div class="floppy-arch-node">
-                  <span class="floppy-arch-label">Signals</span>
-                  <div class="floppy-arch-title">Inbox, calendar, tasks, memory, public context</div>
-                  <p class="floppy-arch-copy">Inputs stay source-aware so the system can separate confirmed facts from guesses.</p>
+            <div class="floppy-session" aria-label="Example Floppy run">
+              <div class="floppy-session-header">
+                <div>
+                  <p class="text-xs font-semibold tracking-[0.18em] text-gold uppercase">Floppy in action</p>
+                  <p class="text-xs text-muted mt-1">A representative morning planning run. Private details removed.</p>
                 </div>
-
-                <div class="floppy-arrow" aria-hidden="true">↓</div>
-
-                <div class="floppy-arch-node center">
-                  <span class="floppy-arch-label">Orchestrator</span>
-                  <div class="floppy-arch-title">Routes work to the right specialist</div>
-                  <p class="floppy-arch-copy">The goal is not one giant assistant. It is a small operating model with ownership and boundaries.</p>
-                </div>
-
-                <div class="floppy-arrow" aria-hidden="true">↓</div>
-
-                <div class="floppy-arch-grid">
-                  <div class="floppy-arch-node">
-                    <span class="floppy-arch-label">Agents</span>
-                    <div class="floppy-arch-title">Planning, meals, jobs, shopping, discovery</div>
-                  </div>
-                  <div class="floppy-arch-node">
-                    <span class="floppy-arch-label">Guardrails</span>
-                    <div class="floppy-arch-title">Approval, safety, cost, privacy</div>
-                  </div>
-                </div>
-
-                <div class="floppy-arrow" aria-hidden="true">↓</div>
-
-                <div class="floppy-arch-grid">
-                  <div class="floppy-arch-node">
-                    <span class="floppy-arch-label">Output</span>
-                    <div class="floppy-arch-title">Briefs, plans, drafts, action bundles</div>
-                  </div>
-                  <div class="floppy-arch-node">
-                    <span class="floppy-arch-label">Learning</span>
-                    <div class="floppy-arch-title">Corrections, evals, drift repair</div>
-                  </div>
-                </div>
+                <span class="text-[10px] font-mono text-green-400 bg-green-400/10 border border-green-400/20 rounded-full px-2 py-1">LIVE SYSTEM</span>
+              </div>
+              <div class="agent-line">
+                <div class="agent-role"><span class="agent-dot"></span>Orchestrator</div>
+                <p>Pull today's calendar, high-signal Gmail, current jobs memory, weather, and recent corrections. Do not reuse stale summaries.</p>
+              </div>
+              <div class="agent-line">
+                <div class="agent-role"><span class="agent-dot"></span>Inbox + calendar agents</div>
+                <p>Found one email-sourced appointment not yet on calendar. Proposed an event and travel buffer, but did not create it without approval.</p>
+              </div>
+              <div class="agent-line">
+                <div class="agent-role"><span class="agent-dot"></span>Jobs agent</div>
+                <p>Converted open loops into "today", "this week", and "lookahead" buckets with a recommended first task and why it matters.</p>
+              </div>
+              <div class="agent-line">
+                <div class="agent-role"><span class="agent-dot"></span>Verifier + memory loop</div>
+                <p>Checked source freshness, flagged uncertainty, applied durable corrections, and logged quality signals for the nightly review.</p>
               </div>
             </div>
           </div>
+
+          <details class="flow-card mt-8 p-5 md:p-6" open>
+            <summary class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-xs font-semibold tracking-[0.18em] text-gold uppercase mb-1">Architecture flowchart</p>
+                <h4 class="text-lg md:text-xl font-bold text-text">Repo-grounded system flow</h4>
+              </div>
+              <span class="text-xs text-muted border border-white/10 rounded-full px-3 py-1">Show / hide</span>
+            </summary>
+            <div class="mt-5 overflow-x-auto">
+              <svg class="flow-diagram min-w-[900px] w-full" viewBox="0 0 940 520" role="img" aria-labelledby="floppy-flow-title floppy-flow-desc">
+                <title id="floppy-flow-title">Floppy product architecture flowchart</title>
+                <desc id="floppy-flow-desc">Floppy observes signals, routes work through OpenClaw and the family orchestrator, uses specialist agents, applies approval gates, sends outputs, writes to durable memory, and runs eval and drift repair loops.</desc>
+                <defs>
+                  <marker id="flowArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"></path>
+                  </marker>
+                </defs>
+
+                <rect x="24" y="36" width="172" height="94" rx="16" fill="rgba(255,255,255,0.055)" stroke="rgba(255,255,255,0.16)"></rect>
+                <text x="46" y="66" fill="#f59e0b" font-size="12" font-weight="800" letter-spacing="2">SIGNALS</text>
+                <text x="46" y="92" fill="#f1f5f9" font-size="14" font-weight="700">Gmail, calendars</text>
+                <text x="46" y="114" fill="#94a3b8" font-size="12">tasks, Telegram, location,</text>
+                <text x="46" y="130" fill="#94a3b8" font-size="12">memory, web context</text>
+
+                <rect x="256" y="36" width="172" height="94" rx="16" fill="rgba(96,165,250,0.09)" stroke="rgba(96,165,250,0.28)"></rect>
+                <text x="278" y="66" fill="#60a5fa" font-size="12" font-weight="800" letter-spacing="2">RUNTIME</text>
+                <text x="278" y="92" fill="#f1f5f9" font-size="14" font-weight="700">OpenClaw</text>
+                <text x="278" y="114" fill="#94a3b8" font-size="12">gateway, schedules, tools,</text>
+                <text x="278" y="130" fill="#94a3b8" font-size="12">channels, model routing</text>
+
+                <rect x="488" y="36" width="172" height="94" rx="16" fill="rgba(245,158,11,0.13)" stroke="rgba(245,158,11,0.34)"></rect>
+                <text x="510" y="66" fill="#f59e0b" font-size="12" font-weight="800" letter-spacing="2">ORCHESTRATOR</text>
+                <text x="510" y="92" fill="#f1f5f9" font-size="14" font-weight="700">Family front door</text>
+                <text x="510" y="114" fill="#94a3b8" font-size="12">decides what matters,</text>
+                <text x="510" y="130" fill="#94a3b8" font-size="12">routes to specialists</text>
+
+                <rect x="720" y="36" width="172" height="94" rx="16" fill="rgba(255,255,255,0.055)" stroke="rgba(255,255,255,0.16)"></rect>
+                <text x="742" y="66" fill="#f59e0b" font-size="12" font-weight="800" letter-spacing="2">GUARDRAILS</text>
+                <text x="742" y="92" fill="#f1f5f9" font-size="14" font-weight="700">Policy layer</text>
+                <text x="742" y="114" fill="#94a3b8" font-size="12">privacy, approval, cost,</text>
+                <text x="742" y="130" fill="#94a3b8" font-size="12">sandbox, source of truth</text>
+
+                <path d="M196 83 H248" stroke="#f59e0b" stroke-width="2" marker-end="url(#flowArrow)"></path>
+                <path d="M428 83 H480" stroke="#f59e0b" stroke-width="2" marker-end="url(#flowArrow)"></path>
+                <path d="M660 83 H712" stroke="#f59e0b" stroke-width="2" marker-end="url(#flowArrow)"></path>
+
+                <rect x="88" y="208" width="764" height="116" rx="20" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.12)"></rect>
+                <text x="118" y="240" fill="#f59e0b" font-size="12" font-weight="800" letter-spacing="2">SPECIALIST AGENTS</text>
+                <text x="118" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Calendar</text>
+                <text x="248" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Inbox</text>
+                <text x="362" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Jobs</text>
+                <text x="470" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Meals</text>
+                <text x="586" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Shopping</text>
+                <text x="724" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Verifier</text>
+                <text x="118" y="298" fill="#94a3b8" font-size="12">Each owns one domain and hands back a recommendation, draft, or approval bundle.</text>
+
+                <path d="M574 130 V200" stroke="#f59e0b" stroke-width="2" marker-end="url(#flowArrow)"></path>
+
+                <rect x="82" y="402" width="188" height="78" rx="16" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.25)"></rect>
+                <text x="104" y="432" fill="#22c55e" font-size="12" font-weight="800" letter-spacing="2">OUTPUT</text>
+                <text x="104" y="458" fill="#f1f5f9" font-size="14" font-weight="700">Briefs, cards, drafts</text>
+
+                <rect x="376" y="402" width="188" height="78" rx="16" fill="rgba(245,158,11,0.10)" stroke="rgba(245,158,11,0.30)"></rect>
+                <text x="398" y="432" fill="#f59e0b" font-size="12" font-weight="800" letter-spacing="2">APPROVAL</text>
+                <text x="398" y="458" fill="#f1f5f9" font-size="14" font-weight="700">Writes, buys, sends</text>
+
+                <rect x="670" y="402" width="188" height="78" rx="16" fill="rgba(96,165,250,0.09)" stroke="rgba(96,165,250,0.28)"></rect>
+                <text x="692" y="432" fill="#60a5fa" font-size="12" font-weight="800" letter-spacing="2">WRITEBACK</text>
+                <text x="692" y="458" fill="#f1f5f9" font-size="14" font-weight="700">Memory, evals, drift</text>
+
+                <path d="M284 324 C244 356, 208 374, 176 394" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#flowArrow)"></path>
+                <path d="M470 324 V394" stroke="#f59e0b" stroke-width="2" marker-end="url(#flowArrow)"></path>
+                <path d="M642 324 C690 356, 724 374, 764 394" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#flowArrow)"></path>
+                <path d="M564 441 H662" stroke="#f59e0b" stroke-width="2" marker-end="url(#flowArrow)"></path>
+                <path d="M764 402 C824 318, 770 166, 648 130" stroke="#60a5fa" stroke-width="2" stroke-dasharray="7 7" fill="none" marker-end="url(#flowArrow)"></path>
+              </svg>
+            </div>
+            <p class="mt-4 text-xs text-muted leading-relaxed">
+              Source model: `ARCHITECTURE.md`, `AGENT_MODEL.md`, and `family-orchestrator/automations/daily-brief.md`. Private data is abstracted; the actual flow is preserved: observe, route, specialize, approve, act, write back, evaluate, and repair drift.
+            </p>
+          </details>
         </div>
       </div>
     </section>
