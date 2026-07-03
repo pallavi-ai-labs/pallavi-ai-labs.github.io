@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pallavi Sharma | AI Product Leader</title>
-  <meta name="description" content="Pallavi Sharma builds AI products for real workflows, combining product judgment with systems depth across generative AI, cloud, and silicon." />
+  <meta name="description" content="Pallavi Sharma builds AI products for real work: enterprise AI, agentic workflows, personal productivity systems, and learning tools." />
   <meta property="og:title" content="Pallavi Sharma | AI Product Leader" />
-  <meta property="og:description" content="AI product leadership, systems thinking, and hands-on builds across generative AI, cloud, and agents." />
+  <meta property="og:description" content="AI products for real work: enterprise AI, agentic workflows, personal productivity systems, and learning tools." />
   <meta property="og:image" content="https://pallavi-ai-labs.github.io/assets/hero.png" />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://pallavi-ai-labs.github.io" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Pallavi Sharma | AI Product Leader" />
-  <meta name="twitter:description" content="AI product leadership, systems thinking, and hands-on builds across generative AI, cloud, and agents." />
+  <meta name="twitter:description" content="AI products for real work: enterprise AI, agentic workflows, personal productivity systems, and learning tools." />
   <meta name="twitter:image" content="https://pallavi-ai-labs.github.io/assets/hero.png" />
   <!-- ANALYTICS: Cloudflare Web Analytics (free, privacy-respecting — zero cookies, GDPR-safe)
        To activate: sign up at cloudflare.com → Analytics & Logs → Web Analytics → Add site → copy token
@@ -192,6 +192,48 @@
       background: #f59e0b;
       box-shadow: 0 0 18px rgba(245,158,11,0.55);
       flex-shrink: 0;
+    }
+    .project-card {
+      min-height: 100%;
+    }
+    .project-theme {
+      color: #f1f5f9;
+      font-size: 1.02rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 0.65rem;
+    }
+    .project-copy {
+      color: #94a3b8;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .project-win {
+      margin-top: auto;
+      margin-bottom: 1rem;
+      border-left: 2px solid rgba(245,158,11,0.72);
+      background: rgba(245,158,11,0.055);
+      padding: 0.7rem 0.85rem;
+      color: #cbd5e1;
+      font-size: 0.78rem;
+      line-height: 1.45;
+    }
+    .project-win strong {
+      color: #f59e0b;
+      font-weight: 800;
+    }
+    .tech-chip {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.035);
+      color: #94a3b8;
+      border-radius: 999px;
+      padding: 0.32rem 0.58rem;
+      font-size: 0.68rem;
+      line-height: 1;
+      white-space: nowrap;
     }
     .stack-card {
       background: rgba(8,12,20,0.72);
@@ -389,22 +431,22 @@
 
           <!-- Left: text -->
           <div>
-            <div class="overline-badge reveal mb-6">AI product + systems builder</div>
+            <div class="overline-badge reveal mb-6">AI product builder</div>
 
             <h1 class="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-text mb-6">
-              I build AI products<br class="hidden md:block" />
-              that work in real workflows.
+              AI products<br class="hidden md:block" />
+              for real work.
             </h1>
 
             <p class="reveal reveal-delay-2 text-muted text-lg leading-relaxed mb-8 max-w-xl">
-              My work spans generative AI, cloud infrastructure, and chip design. I care about whether AI products are useful after the demo: clear user value, reliable systems, sane cost, and trust boundaries that hold up in practice.
+              I build and lead AI products where the hard parts are workflow fit, reliability, cost, and trust. My background spans generative AI, cloud infrastructure, and chip design.
             </p>
 
             <div class="reveal reveal-delay-2 flex flex-wrap gap-2.5 mb-8">
               <span class="signal-pill">Enterprise AI</span>
-              <span class="signal-pill">Agentic systems</span>
+              <span class="signal-pill">Agentic workflows</span>
               <span class="signal-pill">Builder-PM</span>
-              <span class="signal-pill">Trust and evals</span>
+              <span class="signal-pill">Trust by design</span>
             </div>
 
             <!-- Stats row -->
@@ -738,7 +780,7 @@
           </div>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-text mb-4">Pallavi AI Labs</h2>
           <p class="text-muted text-lg max-w-3xl">
-            Small builds I use to test product ideas: agents, memory, voice, evals, cost, safety, and user trust. Some are demos. Some are private systems. All are meant to make the product thinking concrete.
+            A hands-on lab for AI products I want to understand deeply: productivity agents, learning systems, decision intelligence, and trusted personal automation.
           </p>
         </div>
 
@@ -746,7 +788,7 @@
         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
 
           <!-- Card 0: ProductCouncil -->
-          <div class="reveal card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+          <div class="reveal card-hover project-card bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
             <div class="flex items-start justify-between mb-4">
               <div class="text-3xl" aria-hidden="true">🏛️</div>
               <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
@@ -755,15 +797,15 @@
             </div>
             <h3 class="text-lg font-bold text-text mb-1">ProductCouncil</h3>
             <p class="text-sm font-medium text-gold mb-3">Multi-agent product council</p>
-            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              A product workspace where specialist agents debate a decision, create artifacts, and critique the output before it is treated as done. The council includes product, UX, engineering, market, finance, sales, and marketing seats. The system runs on Fable 5 orchestration, Hermes-backed workflows, multi-tenant architecture, Vercel deployment, and 32 reusable skill playbooks.
-            </p>
+            <p class="project-theme">PM productivity through a council of specialist agents.</p>
+            <p class="project-copy">Product, UX, engineering, market, finance, sales, and marketing seats debate decisions and produce red-teamed PM artifacts.</p>
+            <div class="project-win"><strong>Highlight:</strong> Fable 5 orchestration, Hermes workflows, multi-tenant architecture, and 32 reusable playbooks.</div>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Fable 5</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Hermes</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Vercel</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Multi-tenant</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Agent critique</span>
+              <span class="tech-chip">Fable 5</span>
+              <span class="tech-chip">Hermes</span>
+              <span class="tech-chip">Vercel</span>
+              <span class="tech-chip">Multi-tenant</span>
+              <span class="tech-chip">Agent critique</span>
             </div>
             <a href="https://productcouncil.vercel.app/demo" target="_blank" rel="noopener noreferrer"
                class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
@@ -773,7 +815,7 @@
           </div>
 
           <!-- Card 1: BrainSpark Academy -->
-          <div class="reveal card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+          <div class="reveal card-hover project-card bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
             <div class="flex items-start justify-between mb-4">
               <div class="text-3xl" aria-hidden="true">🎓</div>
               <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
@@ -781,14 +823,15 @@
               </span>
             </div>
             <h3 class="text-lg font-bold text-text mb-1">BrainSpark Academy</h3>
-            <p class="text-sm font-medium text-gold mb-3">AI Learning Companion for Children</p>
-            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              Tablet-first tutoring prototype across Math, English, French, Hindi, and Spanish. It explores voice input, read-aloud support, parent controls, and provider choice in one child-friendly learning surface.
-            </p>
+            <p class="text-sm font-medium text-gold mb-3">AI learning companion for children</p>
+            <p class="project-theme">Accessible tutoring that feels simple for kids and manageable for parents.</p>
+            <p class="project-copy">A tablet-first learning surface across math and languages, with voice input, read-aloud support, and parent controls.</p>
+            <div class="project-win"><strong>Theme:</strong> AI for inclusive learning, not just chat wrapped in a lesson plan.</div>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">React PWA</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">OpenAI</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Anthropic</span>
+              <span class="tech-chip">React PWA</span>
+              <span class="tech-chip">Voice UX</span>
+              <span class="tech-chip">OpenAI</span>
+              <span class="tech-chip">Anthropic</span>
             </div>
             <a href="https://brainspark-academy-public-demo.vercel.app" target="_blank" rel="noopener noreferrer"
                class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
@@ -798,7 +841,7 @@
           </div>
 
           <!-- Card 2: Floppy -->
-          <div class="reveal reveal-delay-1 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+          <div class="reveal reveal-delay-1 card-hover project-card bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
             <div class="flex items-start justify-between mb-4">
               <div class="text-3xl" aria-hidden="true">👔</div>
               <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
@@ -806,19 +849,21 @@
               </span>
             </div>
             <h3 class="text-lg font-bold text-text mb-1">Floppy</h3>
-            <p class="text-sm font-medium text-gold mb-3">Private AI Chief of Staff</p>
-            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              A private multi-agent system for household operations. It connects inbox, calendar, tasks, meals, shopping, and planning into daily intelligence, approval-ready actions, and a memory loop. The product question: can personal AI reduce mental load without becoming unsafe or noisy?
-            </p>
+            <p class="text-sm font-medium text-gold mb-3">Family personal chief of staff</p>
+            <p class="project-theme">Personal productivity, coordination, and planning for family life.</p>
+            <p class="project-copy">A private multi-agent system that connects inbox, calendar, tasks, meals, shopping, and memory into daily intelligence and approved actions.</p>
+            <div class="project-win"><strong>Highlight:</strong> Real household automation with approvals, evals, drift repair, Telegram UX, and Obsidian memory.</div>
             <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Chief-of-staff AI</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Multi-agent</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Eval-driven</span>
+              <span class="tech-chip">OpenClaw</span>
+              <span class="tech-chip">Google Workspace</span>
+              <span class="tech-chip">Telegram</span>
+              <span class="tech-chip">Obsidian</span>
+              <span class="tech-chip">Evals</span>
             </div>
           </div>
 
           <!-- Card 3: SignalAtlas -->
-          <div class="reveal reveal-delay-2 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+          <div class="reveal reveal-delay-2 card-hover project-card bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
             <div class="flex items-start justify-between mb-4">
               <div class="text-3xl" aria-hidden="true">🗺️</div>
               <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
@@ -826,14 +871,15 @@
               </span>
             </div>
             <h3 class="text-lg font-bold text-text mb-1">SignalAtlas</h3>
-            <p class="text-sm font-medium text-gold mb-3">Decision Intelligence for Global Cities</p>
-            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              A city-research product that turns global city signals into a thesis, investor lens, business lens, and next steps. The goal is not another dashboard; it is faster sense-making from messy regional data.
-            </p>
+            <p class="text-sm font-medium text-gold mb-3">Decision intelligence for global cities</p>
+            <p class="project-theme">City research that moves from data to thesis.</p>
+            <p class="project-copy">Turns messy regional signals into investor lens, business lens, and next steps instead of another static dashboard.</p>
+            <div class="project-win"><strong>Theme:</strong> Better strategic decisions from public signals and multi-agent synthesis.</div>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Next.js</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Supabase</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Multi-agent</span>
+              <span class="tech-chip">Next.js</span>
+              <span class="tech-chip">Supabase</span>
+              <span class="tech-chip">Multi-agent</span>
+              <span class="tech-chip">Signal synthesis</span>
             </div>
             <a href="https://signalatlas-ai.vercel.app" target="_blank" rel="noopener noreferrer"
                class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-amber-400 transition-colors mt-auto">
@@ -843,7 +889,7 @@
           </div>
 
           <!-- Card 4: InHerVoice -->
-          <div class="reveal reveal-delay-3 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+          <div class="reveal reveal-delay-3 card-hover project-card bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
             <div class="flex items-start justify-between mb-4">
               <div class="text-3xl" aria-hidden="true">✍️</div>
               <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
@@ -851,36 +897,37 @@
               </span>
             </div>
             <h3 class="text-lg font-bold text-text mb-1">InHerVoice</h3>
-            <p class="text-sm font-medium text-gold mb-3">AI PM Brand Builder</p>
-            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              A content workflow that helps turn product experience, current AI signals, and lab observations into clearer writing. It is designed to support a consistent voice without outsourcing judgment.
-            </p>
+            <p class="text-sm font-medium text-gold mb-3">AI PM writing system</p>
+            <p class="project-theme">A personal content engine without outsourcing judgment.</p>
+            <p class="project-copy">Turns product experience, live AI signals, and lab observations into clearer writing while preserving voice and editorial control.</p>
+            <div class="project-win"><strong>Theme:</strong> Thoughtful AI-assisted writing for product leadership and technical storytelling.</div>
             <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Claude Code</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Python</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Obsidian</span>
+              <span class="tech-chip">Claude Code</span>
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Obsidian</span>
+              <span class="tech-chip">Editorial workflow</span>
             </div>
           </div>
 
           <!-- Card 5: Learning Brain -->
-          <div class="reveal reveal-delay-4 card-hover bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
+          <div class="reveal reveal-delay-4 card-hover project-card bg-surface border border-white/8 rounded-2xl p-6 flex flex-col">
             <div class="flex items-start justify-between mb-4">
               <div class="text-3xl" aria-hidden="true">🧠</div>
-              <span class="flex items-center gap-1.5 text-xs font-semibold text-gold bg-gold/10 px-2.5 py-1 rounded-full border border-gold/20">
-                <span class="dot-building text-base leading-none">●</span> BUILDING
+              <span class="flex items-center gap-1.5 text-xs font-semibold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full border border-green-400/20">
+                <span class="dot-live text-base leading-none">●</span> LIVE
               </span>
             </div>
             <h3 class="text-lg font-bold text-text mb-1">Learning Brain</h3>
-            <p class="text-sm font-medium text-gold mb-3">Early-Stage Local Learning System</p>
-            <p class="text-sm text-muted leading-relaxed flex-1 mb-5">
-              Learning Brain is still being built. The idea is simple: I save articles, screenshots, videos, and notes, but most of that material never turns into learning. This project is exploring a local-first way to capture those inputs, organize them into a personal knowledge base, retrieve them with citations, and eventually turn them into review, synthesis, and spaced learning.
-            </p>
+            <p class="text-sm font-medium text-gold mb-3">Agentic personal learning system</p>
+            <p class="project-theme">A local-first brain for turning saved material into learning.</p>
+            <p class="project-copy">Captures articles, screenshots, videos, and notes; organizes them into a searchable knowledge base; and supports retrieval, synthesis, and review.</p>
+            <div class="project-win"><strong>Highlight:</strong> Built as a personal learning workflow with local memory, retrieval, and agent-assisted synthesis.</div>
             <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Exploratory</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Node.js</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">SQLite</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Local-first</span>
-              <span class="text-xs px-2 py-1 rounded bg-surface2 text-muted border border-white/6">Retrieval</span>
+              <span class="tech-chip">Hermes</span>
+              <span class="tech-chip">Node.js</span>
+              <span class="tech-chip">SQLite</span>
+              <span class="tech-chip">Local-first</span>
+              <span class="tech-chip">Retrieval</span>
             </div>
           </div>
 
@@ -1029,21 +1076,29 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
-         CURRENTLY BUILDING
+         ACTIVE SYSTEMS
     ════════════════════════════════════════════ -->
-    <!-- CURRENTLY BUILDING: update this section when project status changes in pallavi-ai-labs.md
+    <!-- ACTIVE SYSTEMS: update this section when project status changes in pallavi-ai-labs.md
          Run /website sync-projects to refresh automatically -->
     <div class="border-t border-white/5 bg-surface2/15 py-6">
       <div class="max-w-7xl mx-auto px-6 md:px-12">
         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
           <div class="flex items-center gap-2.5 flex-shrink-0">
-            <span class="dot-building text-xs leading-none" aria-label="active build">●</span>
-            <span class="text-[11px] font-semibold tracking-[0.18em] text-gold/60 uppercase">Currently Building</span>
+            <span class="dot-live text-xs leading-none" aria-label="active systems">●</span>
+            <span class="text-[11px] font-semibold tracking-[0.18em] text-green-400/70 uppercase">Active Systems</span>
           </div>
           <div class="flex flex-wrap gap-3">
             <div class="flex items-center gap-2 bg-surface/80 rounded-full px-3.5 py-1.5 border border-white/6">
+              <span class="text-xs text-text/80 font-medium">ProductCouncil</span>
+              <span class="text-[10px] text-muted/70 font-mono">multi-agent PM council</span>
+            </div>
+            <div class="flex items-center gap-2 bg-surface/80 rounded-full px-3.5 py-1.5 border border-white/6">
+              <span class="text-xs text-text/80 font-medium">Floppy</span>
+              <span class="text-[10px] text-muted/70 font-mono">family chief of staff</span>
+            </div>
+            <div class="flex items-center gap-2 bg-surface/80 rounded-full px-3.5 py-1.5 border border-white/6">
               <span class="text-xs text-text/80 font-medium">Learning Brain</span>
-              <span class="text-[10px] text-muted/70 font-mono">early local-first learning system</span>
+              <span class="text-[10px] text-muted/70 font-mono">agentic learning system</span>
             </div>
           </div>
           <span class="text-[10px] text-muted/40 sm:ml-auto font-mono">Updated Jul 2026</span>
