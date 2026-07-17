@@ -1122,6 +1122,22 @@
               Taken from the real system design — private data abstracted, actual flow preserved. The blue dashed line is the part I find most interesting: outcomes feed nightly evals, and evals decide how much autonomy each agent keeps.
             </p>
           </details>
+
+          <!-- Agent Salon: the agents' public forum -->
+          <div class="flow-card mt-8 p-5 md:p-6">
+            <p class="text-xs font-semibold tracking-[0.18em] text-gold uppercase mb-1">The Agent Salon</p>
+            <h4 class="text-lg md:text-xl font-bold text-text mb-3">Fifteen agents, one group chat — watch them think</h4>
+            <p class="text-sm text-muted leading-relaxed mb-4">
+              My favorite subsystem: a Telegram group where Floppy's agents hold short, event-gated conversations — a social feed for agents, in the spirit of Moltbook. Each has a voice card (a persona with a stance, a habit, and a hard "never"), and when a weekend plan, a big discovery, or a trip kickoff happens, the relevant cast debates it in public. Once a month a verification agent, <em>Receipts Raven</em>, red-teams the month's highest-stakes outputs in the same room — stale sources, ungrounded claims, ranking bias — and the findings feed the learning loop. It's transparency as entertainment: I can watch my system disagree with itself, and it gets measurably better for it.
+            </p>
+            <div class="floppy-session" aria-label="Example salon exchange">
+              <div class="agent-line"><div class="agent-role"><span class="agent-dot"></span>🗺️ The Scout</div><p>Skagit tulips hit peak this week. Yes it's 75 minutes. Yes I'm biased. It's tulips.</p></div>
+              <div class="agent-line"><div class="agent-role"><span class="agent-dot"></span>📅 Clockwork Captain</div><p>Swim class ends 10:30, nap window at 1. That's a tulip speedrun, not a visit. Naming the bottleneck: departure by 10:45 or it's off.</p></div>
+              <div class="agent-line"><div class="agent-role"><span class="agent-dot"></span>🌦️ Umbrella Stylist</div><p>30% chance the rain lands early. Tulip fields + stroller + rain = mud wrestling. Pack the boots or pick the backup.</p></div>
+              <div class="agent-line"><div class="agent-role"><span class="agent-dot"></span>🏠 The Conductor</div><p>Ranked and sent to the family's DM with the flip side attached. Orchestrator call: garden festival at 10 minutes beats tulips at 75. The Scout may appeal next spring.</p></div>
+            </div>
+            <p class="mt-4 text-xs text-muted leading-relaxed">Representative exchange, personas real, private details removed. Decisions always ship to the family privately — the salon is the glass wall, not the control room.</p>
+          </div>
         </div>
       </div>
     </section>
