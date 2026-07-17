@@ -853,13 +853,13 @@
             </div>
             <h3 class="text-lg font-bold text-text mb-1">Floppy</h3>
             <p class="text-sm font-medium text-gold mb-3">Family personal chief of staff</p>
-            <p class="project-theme">Nine agents that run family life, for about $40 a month.</p>
-            <p class="project-copy">A private multi-agent system that connects inbox, calendar, tasks, meals, shopping, and memory into daily intelligence and approved actions.</p>
-            <div class="project-win"><strong>Edge:</strong> Agents earn autonomy — a nightly eval loop scores every output; accuracy expands an agent's permissions, drift revokes them.</div>
+            <p class="project-theme">Fifteen agents that run family life at near-zero marginal cost.</p>
+            <p class="project-copy">A private multi-agent system spanning calendar, message triage, meals, travel, health cadence, school ops, money radar, and a family memory-keeper — reachable by text, voice note, or "Hey Siri, tell Floppy".</p>
+            <div class="project-win"><strong>Edge:</strong> Agents earn autonomy on a graduated ladder — five clean approvals and a human yes promote a capability; one bad outcome demotes it instantly.</div>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="tech-chip">OpenClaw</span>
-              <span class="tech-chip">Google Workspace</span>
-              <span class="tech-chip">Telegram</span>
+              <span class="tech-chip">4-tier model routing</span>
+              <span class="tech-chip">Telegram + WhatsApp</span>
               <span class="tech-chip">Obsidian</span>
             </div>
             <a href="#floppy"
@@ -991,16 +991,16 @@
                 Floppy tests what a personal chief of staff should actually do.
               </h3>
               <p class="text-muted text-base md:text-lg leading-relaxed mb-6 max-w-3xl">
-                It watches the family's signals — inbox, calendar, tasks, memory — and routes each job to the specialist agent that owns it. Nothing sensitive happens without a yes, and every outcome is written back to memory so the system improves instead of drifting. The family's data stays private; the product lessons are what I share.
+                It watches the family's signals — messages, calendar, tasks, memory — and routes each job to the specialist agent that owns it: trip planning, school logistics, health cadence, subscription radar, even a memory-keeper journaling the moments families forget. Nothing sensitive happens without a yes; every user gets their own voice and briefings; and when a big planning cycle runs, the agents debate it live in their own Telegram forum. The family's data stays private; the product lessons are what I share.
               </p>
               <div class="grid sm:grid-cols-3 gap-3">
                 <div class="floppy-signal rounded-xl p-4">
-                  <p class="text-2xl font-extrabold text-gold mb-1">9</p>
+                  <p class="text-2xl font-extrabold text-gold mb-1">15</p>
                   <p class="text-xs text-muted leading-relaxed">specialist agents, each owning one domain of family life.</p>
                 </div>
                 <div class="floppy-signal rounded-xl p-4">
-                  <p class="text-2xl font-extrabold text-gold mb-1">$40/mo</p>
-                  <p class="text-xs text-muted leading-relaxed">total run cost — while enterprise agent deployments quote six figures.</p>
+                  <p class="text-2xl font-extrabold text-gold mb-1">~$0</p>
+                  <p class="text-xs text-muted leading-relaxed">marginal cost — a 4-tier routing chain rides an existing subscription, free models, and local inference; a paid API call is a logged last resort.</p>
                 </div>
                 <div class="floppy-signal rounded-xl p-4">
                   <p class="text-2xl font-extrabold text-gold mb-1">0</p>
@@ -1067,7 +1067,7 @@
                 <text x="278" y="66" fill="#60a5fa" font-size="12" font-weight="800" letter-spacing="2">RUNTIME</text>
                 <text x="278" y="92" fill="#f1f5f9" font-size="14" font-weight="700">OpenClaw</text>
                 <text x="278" y="114" fill="#94a3b8" font-size="12">gateway, schedules, tools,</text>
-                <text x="278" y="130" fill="#94a3b8" font-size="12">channels, model routing</text>
+                <text x="278" y="130" fill="#94a3b8" font-size="12">4-tier model fallback chain</text>
 
                 <rect x="488" y="36" width="172" height="94" rx="16" fill="rgba(245,158,11,0.13)" stroke="rgba(245,158,11,0.34)"></rect>
                 <text x="510" y="66" fill="#f59e0b" font-size="12" font-weight="800" letter-spacing="2">ORCHESTRATOR</text>
@@ -1086,14 +1086,16 @@
                 <path d="M660 83 H712" stroke="#f59e0b" stroke-width="2" marker-end="url(#flowArrow)"></path>
 
                 <rect x="88" y="208" width="764" height="116" rx="20" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.12)"></rect>
-                <text x="118" y="240" fill="#f59e0b" font-size="12" font-weight="800" letter-spacing="2">SPECIALIST AGENTS</text>
+                <text x="118" y="240" fill="#f59e0b" font-size="12" font-weight="800" letter-spacing="2">SPECIALIST AGENTS — 14</text>
                 <text x="118" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Calendar</text>
-                <text x="248" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Inbox</text>
-                <text x="362" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Jobs</text>
-                <text x="470" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Meals</text>
-                <text x="586" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Shopping</text>
-                <text x="724" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Verifier</text>
-                <text x="118" y="298" fill="#94a3b8" font-size="12">Each owns one domain and hands back a recommendation, draft, or approval bundle.</text>
+                <text x="228" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Inbox</text>
+                <text x="318" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Meals</text>
+                <text x="408" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Travel</text>
+                <text x="500" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Health</text>
+                <text x="594" y="272" fill="#f1f5f9" font-size="14" font-weight="700">School</text>
+                <text x="688" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Money</text>
+                <text x="782" y="272" fill="#f1f5f9" font-size="14" font-weight="700">Memory</text>
+                <text x="118" y="298" fill="#94a3b8" font-size="12">…plus discovery, dining, weather, tasks, occasions, ops. Each hands back a recommendation, draft, or approval bundle.</text>
 
                 <path d="M574 130 V200" stroke="#f59e0b" stroke-width="2" marker-end="url(#flowArrow)"></path>
 
